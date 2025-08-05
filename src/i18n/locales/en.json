@@ -73,15 +73,26 @@
   "emailCapture": {
     "title": "Be the first to know",
     "subtitle": "Sign up to receive news about the platform launch and be one of the first to test it.",
-    "emailPlaceholder": "Enter your email",
+    "placeholder": "Enter your email",
     "acceptTerms": "I accept to receive emails about FamilySpot",
-    "notify": "Notify me",
+    "submitButton": "Notify me",
     "loading": "Sending...",
-    "success": "Email registered successfully!",
-    "successMessage": "Thank you! You will receive a notification as soon as the platform is available.",
-    "signupAgain": "Register another email",
-    "invalidEmail": "Please enter a valid email",
-    "acceptTermsRequired": "You must accept the terms to continue"
+    "disclaimer": "100% free • No spam",
+    "successTitle": "Thank you! 🎉",
+    "successMessage": "You will receive a notification as soon as the platform is available.",
+    "anotherEmail": "Register another email",
+    "errors": {
+      "emailRequired": "Email required",
+      "emailRequiredDesc": "Please enter your email to continue.",
+      "invalidEmail": "Invalid email",
+      "invalidEmailDesc": "Please enter a valid email.",
+      "acceptTerms": "Accept terms",
+      "acceptTermsDesc": "You must accept the terms to continue.",
+      "submitError": "Registration error",
+      "submitErrorDesc": "Please try again in a few minutes."
+    },
+    "successToast": "Success! 🎉",
+    "successToastDesc": "You have been added to our list. You will receive news soon!"
   },
   "footer": {
     "description": "Connecting families to the best places in the city",
