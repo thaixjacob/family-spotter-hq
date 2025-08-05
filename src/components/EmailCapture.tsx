@@ -49,6 +49,12 @@ const EmailCapture = () => {
       // Detectar idioma atual do usuário
       const currentLanguage = localStorage.getItem('i18nextLng') || 'en';
       
+      console.log('🚀 Calling brevo-subscribe function with:', {
+        email: email.toLowerCase().trim(),
+        language: currentLanguage,
+        acceptedTerms: acceptTerms
+      });
+      
       // Chamar a edge function do Brevo
       const { data, error } = await supabase.functions.invoke('brevo-subscribe', {
         body: {
@@ -57,6 +63,8 @@ const EmailCapture = () => {
           acceptedTerms: acceptTerms
         }
       });
+      
+      console.log('📥 Function response:', { data, error });
       
       if (error) {
         console.error('Subscription error:', error);
