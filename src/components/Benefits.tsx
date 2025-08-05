@@ -88,8 +88,36 @@ const Benefits = () => {
           </p>
         </div>
 
+        <div className="grid md:grid-cols-3 gap-8 mb-20">
+          {benefits.map((benefit, index) => {
+            const IconComponent = benefit.icon;
+            return (
+              <div key={benefit.title} className="group">
+                <div className="h-full p-8 bg-card border border-border rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                  {/* Icon */}
+                  <div className={`w-14 h-14 rounded-xl mb-6 flex items-center justify-center ${
+                    benefit.color === 'primary' ? 'bg-primary/10 text-primary' :
+                    benefit.color === 'secondary' ? 'bg-secondary/10 text-secondary' :
+                    'bg-accent/10 text-accent'
+                  } group-hover:scale-110 transition-transform duration-300`}>
+                    <IconComponent className="w-7 h-7" />
+                  </div>
+
+                  {/* Content */}
+                  <h3 className="text-h3 font-bold text-foreground mb-4">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-body text-muted-foreground leading-relaxed">
+                    {benefit.description}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
         {/* Interactive Animation */}
-        <div className="mb-20 flex justify-center">
+        <div className="mt-20 flex justify-center">
           <div className="relative w-full max-w-2xl h-96 bg-gradient-to-br from-secondary/20 via-primary/20 to-accent/20 rounded-[2rem] p-8 overflow-hidden border-4 border-white/50 shadow-2xl">
 
             {/* Phase 1 & 2: Category Dropdown */}
@@ -183,34 +211,6 @@ const Benefits = () => {
               </div>
             )}
           </div>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          {benefits.map((benefit, index) => {
-            const IconComponent = benefit.icon;
-            return (
-              <div key={benefit.title} className="group">
-                <div className="h-full p-8 bg-card border border-border rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                  {/* Icon */}
-                  <div className={`w-14 h-14 rounded-xl mb-6 flex items-center justify-center ${
-                    benefit.color === 'primary' ? 'bg-primary/10 text-primary' :
-                    benefit.color === 'secondary' ? 'bg-secondary/10 text-secondary' :
-                    'bg-accent/10 text-accent'
-                  } group-hover:scale-110 transition-transform duration-300`}>
-                    <IconComponent className="w-7 h-7" />
-                  </div>
-
-                  {/* Content */}
-                  <h3 className="text-h3 font-bold text-foreground mb-4">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-body text-muted-foreground leading-relaxed">
-                    {benefit.description}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
         </div>
 
       </div>
