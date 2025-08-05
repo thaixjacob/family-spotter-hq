@@ -68,11 +68,8 @@ const handler = async (req: Request): Promise<Response> => {
 
     if (existingUser) {
       if (existingUser.is_confirmed) {
-        console.log(`Email ${email} already confirmed, returning conflict`);
-        return new Response(
-          JSON.stringify({ error: 'Email already subscribed' }),
-          { status: 409, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-        );
+        console.log(`Email ${email} already confirmed, will still try Brevo sync`);
+        // Continue to Brevo sync even for confirmed emails (for testing)
       } else {
         console.log(`Email ${email} exists but not confirmed, updating...`);
         // Update existing unconfirmed subscription
