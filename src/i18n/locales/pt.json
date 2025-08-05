@@ -110,6 +110,8 @@
       "invalidEmailDesc": "Por favor, insira um email válido.",
       "acceptTerms": "Aceite os termos",
       "acceptTermsDesc": "Por favor, aceite receber novidades para continuar.",
+      "emailExists": "Email Já Cadastrado",
+      "emailExistsDesc": "Este email já está em nosso sistema. Obrigado pelo interesse!",
       "submitError": "Erro ao cadastrar",
       "submitErrorDesc": "Tente novamente em alguns minutos."
     },

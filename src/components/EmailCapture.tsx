@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Mail, Check, AlertCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 const EmailCapture = () => {
   const { t } = useTranslation();
   const [email, setEmail] = useState('');
@@ -45,8 +46,52 @@ const EmailCapture = () => {
     }
     setIsLoading(true);
     try {
-      // Simular API call - aqui você integraria com seu serviço de email marketing
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      // Detectar idioma atual do usuário
+      const currentLanguage = localStorage.getItem('i18nextLng') || 'en';
+      
+      // Verificar se email já existe
+      const { data: existingEmail, error: checkError } = await supabase
+        .rpc('check_email_exists', { email_input: email });
+      
+      if (checkError) {
+        console.error('Error checking email:', checkError);
+        throw new Error('Failed to validate email');
+      }
+      
+      if (existingEmail) {
+        toast({
+          variant: "destructive",
+          title: t('emailCapture.errors.emailExists'),
+          description: t('emailCapture.errors.emailExistsDesc')
+        });
+        return;
+      }
+      
+      // Inserir email no banco de dados
+      const { data, error } = await supabase
+        .from('email_subscribers')
+        .insert({
+          email: email.toLowerCase().trim(),
+          accepted_terms: acceptTerms,
+          language: currentLanguage
+        })
+        .select()
+        .single();
+      
+      if (error) {
+        console.error('Error inserting email:', error);
+        if (error.code === '23505') { // Unique constraint violation
+          toast({
+            variant: "destructive",
+            title: t('emailCapture.errors.emailExists'),
+            description: t('emailCapture.errors.emailExistsDesc')
+          });
+          return;
+        }
+        throw error;
+      }
+      
+      console.log('Email subscriber created:', data);
       setIsSuccess(true);
       toast({
         title: t('emailCapture.successToast'),
@@ -57,6 +102,7 @@ const EmailCapture = () => {
       setEmail('');
       setAcceptTerms(false);
     } catch (error) {
+      console.error('Submit error:', error);
       toast({
         variant: "destructive",
         title: t('emailCapture.errors.submitError'),

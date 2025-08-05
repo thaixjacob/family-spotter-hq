@@ -89,6 +89,8 @@
       "invalidEmailDesc": "Please enter a valid email.",
       "acceptTerms": "Accept terms",
       "acceptTermsDesc": "You must accept the terms to continue.",
+      "emailExists": "Email Already Registered",
+      "emailExistsDesc": "This email is already in our system. Thank you for your interest!",
       "submitError": "Registration error",
       "submitErrorDesc": "Please try again in a few minutes."
     },
