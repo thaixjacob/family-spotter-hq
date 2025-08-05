@@ -5,6 +5,7 @@ const Benefits = () => {
   const [animationPhase, setAnimationPhase] = useState(0);
   const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
   const [showPins, setShowPins] = useState(false);
+  const [visiblePins, setVisiblePins] = useState<number[]>([]);
 
   const benefits = [
     {
@@ -49,16 +50,23 @@ const Benefits = () => {
       setSelectedFilters(["Shade", "Food Places Nearby"]);
       setAnimationPhase(4);
       
-      // Phase 5: Mix and show pins
+      // Phase 5: Show pins one by one
       await new Promise(resolve => setTimeout(resolve, 2000));
       setAnimationPhase(5);
       setShowPins(true);
+      
+      // Show pins one by one with pop-up effect
+      for (let i = 0; i < 6; i++) {
+        await new Promise(resolve => setTimeout(resolve, 300));
+        setVisiblePins(prev => [...prev, i]);
+      }
       
       // Reset animation
       await new Promise(resolve => setTimeout(resolve, 3000));
       setAnimationPhase(0);
       setSelectedFilters([]);
       setShowPins(false);
+      setVisiblePins([]);
     };
 
     sequence();
@@ -82,19 +90,6 @@ const Benefits = () => {
         {/* Interactive Animation */}
         <div className="mb-20 flex justify-center">
           <div className="relative w-full max-w-2xl h-96 bg-gradient-to-br from-secondary/20 via-primary/20 to-accent/20 rounded-[2rem] p-8 overflow-hidden border-4 border-white/50 shadow-2xl">
-            
-            {/* Arrow Cursor */}
-            <div className={`absolute transition-all duration-1000 ease-in-out pointer-events-none z-50 ${
-              animationPhase === 1 ? 'top-20 left-40' :
-              animationPhase === 2 ? 'top-24 left-56' :
-              animationPhase === 4 ? 'top-44 left-32' : 'top-16 left-28'
-            }`}>
-              <div className="relative transform hover:scale-110 transition-transform">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3 3L10.07 19.97L12.58 12.58L19.97 10.07L3 3Z" fill="currentColor" stroke="white" strokeWidth="2"/>
-                </svg>
-              </div>
-            </div>
 
             {/* Phase 1 & 2: Category Dropdown */}
             {(animationPhase === 1 || animationPhase === 2) && (
@@ -111,7 +106,10 @@ const Benefits = () => {
                           : "hover:bg-gray-100 text-foreground hover:scale-105"
                       }`}
                     >
-                      🎪 {category}
+                      {category === "Cafés" && "☕"} 
+                      {category === "Restaurants" && "🍽️"} 
+                      {category === "Activities" && "🎯"} 
+                      {category === "Playgrounds" && "🏰"} {category}
                     </div>
                   ))}
                 </div>
@@ -148,23 +146,25 @@ const Benefits = () => {
             {showPins && (
               <div className="absolute inset-0">
                 {[...Array(6)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="absolute animate-bounce"
-                    style={{
-                      left: `${10 + Math.random() * 80}%`,
-                      top: `${10 + Math.random() * 80}%`,
-                      animationDelay: `${i * 0.2}s`,
-                      animationDuration: '1.5s'
-                    }}
-                  >
-                    <div className="relative transform hover:scale-125 transition-transform">
-                      <div className="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-full shadow-2xl flex items-center justify-center border-4 border-white">
-                        <MapPin className="w-7 h-7 text-white" />
+                  visiblePins.includes(i) && (
+                    <div
+                      key={i}
+                      className={`absolute ${
+                        visiblePins.includes(i) ? 'animate-bounce' : 'opacity-0'
+                      }`}
+                      style={{
+                        left: `${15 + (i * 12)}%`,
+                        top: `${20 + ((i % 3) * 20)}%`,
+                        animationDuration: '1.5s'
+                      }}
+                    >
+                      <div className={`transform transition-all duration-300 ${
+                        visiblePins.includes(i) ? 'scale-100 animate-scale-in' : 'scale-0'
+                      }`}>
+                        <MapPin className="w-8 h-8 text-white drop-shadow-lg" />
                       </div>
-                      <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[10px] border-r-[10px] border-l-transparent border-r-transparent border-t-[15px] border-t-primary"></div>
                     </div>
-                  </div>
+                  )
                 ))}
               </div>
             )}
