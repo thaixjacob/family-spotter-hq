@@ -73,7 +73,7 @@ const HeroSection = () => {
           <div className="relative">
             <div className="relative z-10">
               <img
-                src={heroImage}
+                src="/lovable-uploads/b46a0d7b-97fa-4d8e-bd0f-8dce6c56987a.png"
                 alt="Família feliz explorando lugares incríveis"
                 className="w-full h-auto rounded-2xl shadow-2xl"
               />
