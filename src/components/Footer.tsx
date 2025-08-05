@@ -119,7 +119,7 @@ const Footer = () => {
             
             <div className="flex items-center space-x-6">
               <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-success rounded-full"></div>
+                <div className="w-2 h-2 bg-success rounded-full animate-pulse-green"></div>
                 <span className="text-small text-background/60">
                   {t('footer.developmentStatus')}
                 </span>

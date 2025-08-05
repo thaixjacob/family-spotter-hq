@@ -73,7 +73,7 @@ const HowItWorks = () => {
         <div className="text-center mt-16">
           <div className="inline-flex items-center px-6 py-3 bg-card border border-border rounded-xl shadow-sm">
             <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-success rounded-full animate-pulse"></div>
+              <div className="w-2 h-2 bg-success rounded-full animate-pulse-green"></div>
               <span className="text-small text-muted-foreground">
                 {t('howItWorks.development')}
               </span>
