@@ -66,10 +66,12 @@ const handler = async (req: Request): Promise<Response> => {
 
     console.log(`Existing user check result:`, existingUser);
 
+    let shouldAddToBrevo = true;
+
     if (existingUser) {
       if (existingUser.is_confirmed) {
-        console.log(`Email ${email} already confirmed, will still try Brevo sync`);
-        // Continue to Brevo sync even for confirmed emails (for testing)
+        console.log(`Email ${email} already confirmed, will still try Brevo sync for testing`);
+        // Continue to process Brevo for testing purposes
       } else {
         console.log(`Email ${email} exists but not confirmed, updating...`);
         // Update existing unconfirmed subscription
@@ -117,7 +119,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     console.log(`Brevo integration check - API Key exists: ${!!brevoApiKey}, List ID: ${brevoListId}`);
 
-    if (brevoApiKey && brevoListId) {
+    if (brevoApiKey && brevoListId && shouldAddToBrevo) {
       try {
         console.log(`Adding ${email} to Brevo list ${brevoListId}`);
         const brevoPayload = {
@@ -163,27 +165,29 @@ const handler = async (req: Request): Promise<Response> => {
         // Don't fail the request if Brevo fails, just log it
       }
     } else {
-      console.log('Brevo integration not configured - missing API key or list ID');
+      console.log('Brevo integration not configured or skipped - API key exists:', !!brevoApiKey, 'List ID:', brevoListId, 'Should add:', shouldAddToBrevo);
     }
 
-    // Update confirmation status in our database
-    console.log(`Confirming subscription for ${email}`);
-    const { error: confirmError } = await supabase
-      .from('email_subscribers')
-      .update({
-        is_confirmed: true,
-        confirmed_at: new Date().toISOString()
-      })
-      .eq('email', email);
+    // Update confirmation status in our database (only for new/unconfirmed emails)
+    if (!existingUser || !existingUser.is_confirmed) {
+      console.log(`Confirming subscription for ${email}`);
+      const { error: confirmError } = await supabase
+        .from('email_subscribers')
+        .update({
+          is_confirmed: true,
+          confirmed_at: new Date().toISOString()
+        })
+        .eq('email', email);
 
-    if (confirmError) {
-      console.error('Error confirming subscription:', confirmError);
-      return new Response(
-        JSON.stringify({ error: 'Failed to confirm subscription' }),
-        { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-      );
-    } else {
-      console.log(`Successfully confirmed subscription for ${email}`);
+      if (confirmError) {
+        console.error('Error confirming subscription:', confirmError);
+        return new Response(
+          JSON.stringify({ error: 'Failed to confirm subscription' }),
+          { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        );
+      } else {
+        console.log(`Successfully confirmed subscription for ${email}`);
+      }
     }
 
     console.log('Function completed successfully');
