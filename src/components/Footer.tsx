@@ -1,5 +1,5 @@
 import { Heart } from "lucide-react";
-import familySpotLogo from "/lovable-uploads/32030f87-7b3e-4dce-9045-94a8807c8c76.png";
+import familySpotLogo from "/lovable-uploads/75438607-eebf-4c73-bf26-acfc839fb6a9.png";
 
 const Footer = () => {
   const footerLinks = [
