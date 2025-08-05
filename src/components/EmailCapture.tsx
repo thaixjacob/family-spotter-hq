@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Mail, Check, AlertCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 const EmailCapture = () => {
+  const { t } = useTranslation();
   const [email, setEmail] = useState('');
   const [acceptTerms, setAcceptTerms] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -20,24 +22,24 @@ const EmailCapture = () => {
     if (!email) {
       toast({
         variant: "destructive",
-        title: "Email obrigatório",
-        description: "Por favor, insira seu email para continuar."
+        title: t('emailCapture.errors.emailRequired'),
+        description: t('emailCapture.errors.emailRequiredDesc')
       });
       return;
     }
     if (!validateEmail(email)) {
       toast({
         variant: "destructive",
-        title: "Email inválido",
-        description: "Por favor, insira um email válido."
+        title: t('emailCapture.errors.invalidEmail'),
+        description: t('emailCapture.errors.invalidEmailDesc')
       });
       return;
     }
     if (!acceptTerms) {
       toast({
         variant: "destructive",
-        title: "Aceite os termos",
-        description: "Por favor, aceite receber novidades para continuar."
+        title: t('emailCapture.errors.acceptTerms'),
+        description: t('emailCapture.errors.acceptTermsDesc')
       });
       return;
     }
@@ -47,8 +49,8 @@ const EmailCapture = () => {
       await new Promise(resolve => setTimeout(resolve, 1500));
       setIsSuccess(true);
       toast({
-        title: "Sucesso! 🎉",
-        description: "Você foi adicionado à nossa lista. Em breve você receberá novidades!"
+        title: t('emailCapture.successToast'),
+        description: t('emailCapture.successToastDesc')
       });
 
       // Reset form
@@ -57,8 +59,8 @@ const EmailCapture = () => {
     } catch (error) {
       toast({
         variant: "destructive",
-        title: "Erro ao cadastrar",
-        description: "Tente novamente em alguns minutos."
+        title: t('emailCapture.errors.submitError'),
+        description: t('emailCapture.errors.submitErrorDesc')
       });
     } finally {
       setIsLoading(false);
@@ -73,15 +75,14 @@ const EmailCapture = () => {
             </div>
             
             <h2 className="text-h2 font-bold text-foreground mb-4">
-              Obrigado! 🎉
+              {t('emailCapture.successTitle')}
             </h2>
             <p className="text-body text-muted-foreground mb-8">
-              Você está na lista! Assim que o FamilySpot estiver pronto, 
-              você será um dos primeiros a saber.
+              {t('emailCapture.successMessage')}
             </p>
             
             <Button variant="outline" onClick={() => setIsSuccess(false)}>
-              Cadastrar outro email
+              {t('emailCapture.anotherEmail')}
             </Button>
           </div>
         </div>
@@ -96,25 +97,24 @@ const EmailCapture = () => {
             </div>
             
             <h2 className="text-h2 font-bold text-foreground mb-4">
-              Seja um dos Primeiros!
+              {t('emailCapture.title')}
             </h2>
             <p className="text-body text-muted-foreground">
-              Seja um dos primeiros a descobrir os melhores lugares para sua família
+              {t('emailCapture.subtitle')}
             </p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-4">
               <div className="relative">
-                <Input type="email" placeholder="seu@email.com" value={email} onChange={e => setEmail(e.target.value)} className="pl-12 h-12 text-body border-2 border-border focus:border-primary rounded-full" disabled={isLoading} />
+                <Input type="email" placeholder={t('emailCapture.placeholder')} value={email} onChange={e => setEmail(e.target.value)} className="pl-12 h-12 text-body border-2 border-border focus:border-primary rounded-full" disabled={isLoading} />
                 <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground" />
               </div>
 
               <div className="flex items-start space-x-3">
                 <Checkbox id="accept-terms" checked={acceptTerms} onCheckedChange={checked => setAcceptTerms(checked as boolean)} disabled={isLoading} className="mt-1" />
                 <label htmlFor="accept-terms" className="text-small text-muted-foreground leading-relaxed cursor-pointer">
-                  Aceito receber novidades sobre o FamilySpot e concordo com a coleta 
-                  dos meus dados para este fim
+                  {t('emailCapture.acceptTerms')}
                 </label>
               </div>
             </div>
@@ -122,11 +122,11 @@ const EmailCapture = () => {
             <Button type="submit" variant="hero" size="lg" className="w-full h-12" disabled={isLoading}>
               {isLoading ? <div className="flex items-center space-x-2">
                   <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                  <span>Guardando seu lugar...</span>
-                </div> : 'Guardar meu lugar na lista'}
+                  <span>{t('emailCapture.loading')}</span>
+                </div> : t('emailCapture.submitButton')}
             </Button>
 
-            <p className="text-center text-small text-muted-foreground">100% gratuito • Sem spam</p>
+            <p className="text-center text-small text-muted-foreground">{t('emailCapture.disclaimer')}</p>
           </form>
         </div>
       </div>

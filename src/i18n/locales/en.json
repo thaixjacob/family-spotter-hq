@@ -81,5 +81,78 @@
     "copyright": "© 2024 FamilySpot. All rights reserved.",
     "status": "Platform status",
     "operational": "Operational"
+  },
+  "howItWorks": {
+    "title": "How FamilySpot Works",
+    "subtitle": "A simple and intuitive platform that connects families through sharing experiences and discoveries",
+    "steps": {
+      "explore": {
+        "title": "Explore",
+        "description": "Interactive map with places verified by other parents"
+      },
+      "trust": {
+        "title": "Trust",
+        "description": "Reviews from other parents in the community"
+      },
+      "contribute": {
+        "title": "Contribute",
+        "description": "Add, edit and rate places you know"
+      }
+    },
+    "development": "Platform under development - be one of the first to test!"
+  },
+  "benefits": {
+    "title": "Why Choose FamilySpot?",
+    "subtitle": "Created by parents, for parents. We understand your needs and want to make your family discoveries easier.",
+    "items": {
+      "verified": {
+        "title": "Community Verified Places",
+        "description": "All locations are recommended and rated by real parents, ensuring reliable and up-to-date information."
+      },
+      "filters": {
+        "title": "Age and Needs Filters",
+        "description": "Find perfect places for each age group of your child, from babies to older children."
+      },
+      "updated": {
+        "title": "Updated Information",
+        "description": "The community keeps information always fresh, with current schedules, prices and conditions."
+      }
+    },
+    "categories": {
+      "cafes": "Cafés",
+      "restaurants": "Restaurants",
+      "activities": "Activities",
+      "playgrounds": "Playgrounds"
+    },
+    "filters": {
+      "shade": "Shade",
+      "drinkingFountain": "Drinking Fountain",
+      "accessibility": "Accessibility",
+      "foodNearby": "Food Places Nearby"
+    }
+  },
+  "emailCapture": {
+    "title": "Be One of the First!",
+    "subtitle": "Be one of the first to discover the best places for your family",
+    "placeholder": "your@email.com",
+    "acceptTerms": "I accept to receive news about FamilySpot and agree to the collection of my data for this purpose",
+    "submitButton": "Save my spot on the list",
+    "loading": "Saving your spot...",
+    "disclaimer": "100% free • No spam",
+    "successTitle": "Thank you! 🎉",
+    "successMessage": "You're on the list! As soon as FamilySpot is ready, you'll be one of the first to know.",
+    "anotherEmail": "Register another email",
+    "errors": {
+      "emailRequired": "Email required",
+      "emailRequiredDesc": "Please enter your email to continue.",
+      "invalidEmail": "Invalid email",
+      "invalidEmailDesc": "Please enter a valid email.",
+      "acceptTerms": "Accept terms",
+      "acceptTermsDesc": "Please accept to receive news to continue.",
+      "submitError": "Registration error",
+      "submitErrorDesc": "Try again in a few minutes."
+    },
+    "successToast": "Success! 🎉",
+    "successToastDesc": "You have been added to our list. You will receive news soon!"
   }
 }

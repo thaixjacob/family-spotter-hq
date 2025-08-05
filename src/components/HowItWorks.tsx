@@ -1,25 +1,28 @@
+import { useTranslation } from 'react-i18next';
 import { Map, Users, Plus } from "lucide-react";
 
 const HowItWorks = () => {
+  const { t } = useTranslation();
+  
   const steps = [
     {
       icon: Map,
-      title: "Explore",
-      description: "Mapa interativo com lugares verificados por outros pais",
+      title: t('howItWorks.steps.explore.title'),
+      description: t('howItWorks.steps.explore.description'),
       color: "primary",
       gradient: "from-primary to-primary-dark"
     },
     {
       icon: Users,
-      title: "Confie",
-      description: "Avaliações de outros pais da comunidade",
+      title: t('howItWorks.steps.trust.title'),
+      description: t('howItWorks.steps.trust.description'),
       color: "secondary",
       gradient: "from-secondary to-secondary-dark"
     },
     {
       icon: Plus,
-      title: "Contribua",
-      description: "Adicione, edite e avalie lugares que você conhece",
+      title: t('howItWorks.steps.contribute.title'),
+      description: t('howItWorks.steps.contribute.description'),
       color: "accent",
       gradient: "from-accent to-accent-dark"
     }
@@ -30,11 +33,10 @@ const HowItWorks = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-h2 font-bold text-foreground mb-4">
-            Como Funciona o FamilySpot
+            {t('howItWorks.title')}
           </h2>
           <p className="text-body text-muted-foreground max-w-2xl mx-auto">
-            Uma plataforma simples e intuitiva que conecta famílias através 
-            do compartilhamento de experiências e descobertas
+            {t('howItWorks.subtitle')}
           </p>
         </div>
 
@@ -78,7 +80,7 @@ const HowItWorks = () => {
             <div className="flex items-center space-x-2">
               <div className="w-2 h-2 bg-success rounded-full animate-pulse"></div>
               <span className="text-small text-muted-foreground">
-                Plataforma em desenvolvimento - seja um dos primeiros a testar!
+                {t('howItWorks.development')}
               </span>
             </div>
           </div>

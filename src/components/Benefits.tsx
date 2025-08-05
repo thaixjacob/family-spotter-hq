@@ -1,7 +1,9 @@
+import { useTranslation } from 'react-i18next';
 import { Shield, Filter, RefreshCw, MapPin } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const Benefits = () => {
+  const { t } = useTranslation();
   const [animationPhase, setAnimationPhase] = useState(0);
   const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
   const [showPins, setShowPins] = useState(false);
@@ -10,26 +12,26 @@ const Benefits = () => {
   const benefits = [
     {
       icon: Shield,
-      title: "Lugares Verificados pela Comunidade",
-      description: "Todos os locais são recomendados e avaliados por pais reais, garantindo informações confiáveis e atualizadas.",
+      title: t('benefits.items.verified.title'),
+      description: t('benefits.items.verified.description'),
       color: "primary"
     },
     {
       icon: Filter,
-      title: "Filtros por Idade e Necessidades",
-      description: "Encontre lugares perfeitos para cada faixa etária do seu filho, desde bebês até crianças maiores.",
+      title: t('benefits.items.filters.title'),
+      description: t('benefits.items.filters.description'),
       color: "secondary"
     },
     {
       icon: RefreshCw,
-      title: "Informações Atualizadas",
-      description: "A comunidade mantém as informações sempre frescas, com horários, preços e condições atuais.",
+      title: t('benefits.items.updated.title'),
+      description: t('benefits.items.updated.description'),
       color: "accent"
     }
   ];
 
-  const categories = ["Cafés", "Restaurants", "Activities", "Playgrounds"];
-  const filters = ["Shade", "Drinking Fountain", "Accessibility", "Food Places Nearby"];
+  const categories = [t('benefits.categories.cafes'), t('benefits.categories.restaurants'), t('benefits.categories.activities'), t('benefits.categories.playgrounds')];
+  const filters = [t('benefits.filters.shade'), t('benefits.filters.drinkingFountain'), t('benefits.filters.accessibility'), t('benefits.filters.foodNearby')];
 
   useEffect(() => {
     const sequence = async () => {
@@ -47,7 +49,7 @@ const Benefits = () => {
       
       // Phase 4: Select filters
       await new Promise(resolve => setTimeout(resolve, 1500));
-      setSelectedFilters(["Shade", "Food Places Nearby"]);
+      setSelectedFilters([t('benefits.filters.shade'), t('benefits.filters.foodNearby')]);
       setAnimationPhase(4);
       
       // Phase 5: Show pins one by one
@@ -79,11 +81,10 @@ const Benefits = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-h2 font-bold text-foreground mb-4">
-            Por que Escolher o FamilySpot?
+            {t('benefits.title')}
           </h2>
           <p className="text-body text-muted-foreground max-w-2xl mx-auto">
-            Criado por pais, para pais. Entendemos suas necessidades e 
-            queremos facilitar suas descobertas familiares.
+            {t('benefits.subtitle')}
           </p>
         </div>
 
@@ -101,15 +102,15 @@ const Benefits = () => {
                     <div
                       key={category}
                       className={`px-8 py-5 rounded-2xl text-button font-bold transition-all duration-500 cursor-pointer ${
-                        category === "Playgrounds" && animationPhase === 2
+                        category === t('benefits.categories.playgrounds') && animationPhase === 2
                           ? "bg-primary text-white shadow-lg scale-110 transform"
                           : "hover:bg-gray-100 text-foreground hover:scale-105"
                       }`}
                     >
-                      {category === "Cafés" && "☕"} 
-                      {category === "Restaurants" && "🍽️"} 
-                      {category === "Activities" && "🎯"} 
-                      {category === "Playgrounds" && "🏰"} {category}
+                      {category === t('benefits.categories.cafes') && "☕"} 
+                      {category === t('benefits.categories.restaurants') && "🍽️"} 
+                      {category === t('benefits.categories.activities') && "🎯"} 
+                      {category === t('benefits.categories.playgrounds') && "🏰"} {category}
                     </div>
                   ))}
                 </div>
@@ -132,10 +133,10 @@ const Benefits = () => {
                         animationDelay: animationPhase === 3 ? `${idx * 0.3}s` : '0s'
                       }}
                     >
-                      {filter === "Shade" && "🌳"} 
-                      {filter === "Drinking Fountain" && "💧"} 
-                      {filter === "Accessibility" && "♿"} 
-                      {filter === "Food Places Nearby" && "🍕"} {filter}
+                      {filter === t('benefits.filters.shade') && "🌳"} 
+                      {filter === t('benefits.filters.drinkingFountain') && "💧"} 
+                      {filter === t('benefits.filters.accessibility') && "♿"} 
+                      {filter === t('benefits.filters.foodNearby') && "🍕"} {filter}
                     </button>
                   ))}
                 </div>

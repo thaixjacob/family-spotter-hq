@@ -81,5 +81,78 @@
     "copyright": "© 2024 FamilySpot. Todos os direitos reservados.",
     "status": "Status da plataforma",
     "operational": "Operacional"
+  },
+  "howItWorks": {
+    "title": "Como Funciona o FamilySpot",
+    "subtitle": "Uma plataforma simples e intuitiva que conecta famílias através do compartilhamento de experiências e descobertas",
+    "steps": {
+      "explore": {
+        "title": "Explore",
+        "description": "Mapa interativo com lugares verificados por outros pais"
+      },
+      "trust": {
+        "title": "Confie",
+        "description": "Avaliações de outros pais da comunidade"
+      },
+      "contribute": {
+        "title": "Contribua",
+        "description": "Adicione, edite e avalie lugares que você conhece"
+      }
+    },
+    "development": "Plataforma em desenvolvimento - seja um dos primeiros a testar!"
+  },
+  "benefits": {
+    "title": "Por que Escolher o FamilySpot?",
+    "subtitle": "Criado por pais, para pais. Entendemos suas necessidades e queremos facilitar suas descobertas familiares.",
+    "items": {
+      "verified": {
+        "title": "Lugares Verificados pela Comunidade",
+        "description": "Todos os locais são recomendados e avaliados por pais reais, garantindo informações confiáveis e atualizadas."
+      },
+      "filters": {
+        "title": "Filtros por Idade e Necessidades",
+        "description": "Encontre lugares perfeitos para cada faixa etária do seu filho, desde bebês até crianças maiores."
+      },
+      "updated": {
+        "title": "Informações Atualizadas",
+        "description": "A comunidade mantém as informações sempre frescas, com horários, preços e condições atuais."
+      }
+    },
+    "categories": {
+      "cafes": "Cafés",
+      "restaurants": "Restaurantes",
+      "activities": "Atividades",
+      "playgrounds": "Playgrounds"
+    },
+    "filters": {
+      "shade": "Sombra",
+      "drinkingFountain": "Bebedouro",
+      "accessibility": "Acessibilidade",
+      "foodNearby": "Comida Próxima"
+    }
+  },
+  "emailCapture": {
+    "title": "Seja um dos Primeiros!",
+    "subtitle": "Seja um dos primeiros a descobrir os melhores lugares para sua família",
+    "placeholder": "seu@email.com",
+    "acceptTerms": "Aceito receber novidades sobre o FamilySpot e concordo com a coleta dos meus dados para este fim",
+    "submitButton": "Guardar meu lugar na lista",
+    "loading": "Guardando seu lugar...",
+    "disclaimer": "100% gratuito • Sem spam",
+    "successTitle": "Obrigado! 🎉",
+    "successMessage": "Você está na lista! Assim que o FamilySpot estiver pronto, você será um dos primeiros a saber.",
+    "anotherEmail": "Cadastrar outro email",
+    "errors": {
+      "emailRequired": "Email obrigatório",
+      "emailRequiredDesc": "Por favor, insira seu email para continuar.",
+      "invalidEmail": "Email inválido",
+      "invalidEmailDesc": "Por favor, insira um email válido.",
+      "acceptTerms": "Aceite os termos",
+      "acceptTermsDesc": "Por favor, aceite receber novidades para continuar.",
+      "submitError": "Erro ao cadastrar",
+      "submitErrorDesc": "Tente novamente em alguns minutos."
+    },
+    "successToast": "Sucesso! 🎉",
+    "successToastDesc": "Você foi adicionado à nossa lista. Em breve você receberá novidades!"
   }
 }
