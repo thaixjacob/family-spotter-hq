@@ -1,47 +1,51 @@
 import { Heart } from "lucide-react";
-import familySpotLogo from "/lovable-uploads/75438607-eebf-4c73-bf26-acfc839fb6a9.png";
-
+import familySpotLogo from "@/assets/familyspot-logo.png";
 const Footer = () => {
-  const footerLinks = [
-    {
-      title: "Produto",
-      links: [
-        { label: "Como Funciona", href: "#como-funciona" },
-        { label: "Benefícios", href: "#beneficios" },
-        { label: "Sobre", href: "#sobre" }
-      ]
-    },
-    {
-      title: "Suporte",
-      links: [
-        { label: "Contato", href: "#contato" },
-        { label: "FAQ", href: "#faq" },
-        { label: "Ajuda", href: "#ajuda" }
-      ]
-    },
-    {
-      title: "Legal",
-      links: [
-        { label: "Privacidade", href: "#privacidade" },
-        { label: "Termos de Uso", href: "#termos" },
-        { label: "Cookies", href: "#cookies" }
-      ]
-    }
-  ];
-
-  return (
-    <footer className="bg-foreground text-background">
+  const footerLinks = [{
+    title: "Produto",
+    links: [{
+      label: "Como Funciona",
+      href: "#como-funciona"
+    }, {
+      label: "Benefícios",
+      href: "#beneficios"
+    }, {
+      label: "Sobre",
+      href: "#sobre"
+    }]
+  }, {
+    title: "Suporte",
+    links: [{
+      label: "Contato",
+      href: "#contato"
+    }, {
+      label: "FAQ",
+      href: "#faq"
+    }, {
+      label: "Ajuda",
+      href: "#ajuda"
+    }]
+  }, {
+    title: "Legal",
+    links: [{
+      label: "Privacidade",
+      href: "#privacidade"
+    }, {
+      label: "Termos de Uso",
+      href: "#termos"
+    }, {
+      label: "Cookies",
+      href: "#cookies"
+    }]
+  }];
+  return <footer className="bg-foreground text-background">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Main Footer Content */}
         <div className="py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
-              <img 
-                src={familySpotLogo} 
-                alt="FamilySpot" 
-                className="h-8 w-auto filter brightness-0 invert"
-              />
+              <img src={familySpotLogo} alt="FamilySpot" className="h-8 w-auto filter brightness-0 invert" />
               <span className="font-baloo font-bold text-h3 text-secondary">
                 FamilySpot
               </span>
@@ -60,25 +64,16 @@ const Footer = () => {
           </div>
 
           {/* Links Sections */}
-          {footerLinks.map((section) => (
-            <div key={section.title}>
+          {footerLinks.map(section => <div key={section.title}>
               <h3 className="text-h3 font-bold text-background mb-4">
                 {section.title}
               </h3>
               <ul className="space-y-2">
-                {section.links.map((link) => (
-                  <li key={link.label}>
-                    <a
-                      href={link.href}
-                      className="text-body text-background/80 hover:text-secondary transition-colors duration-200"
-                    >
-                      {link.label}
-                    </a>
-                  </li>
-                ))}
+                {section.links.map(link => <li key={link.label}>
+                    
+                  </li>)}
               </ul>
-            </div>
-          ))}
+            </div>)}
         </div>
 
         {/* Bottom Bar */}
@@ -102,8 +97,6 @@ const Footer = () => {
 
       {/* Decorative Elements */}
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-primary/5 to-transparent pointer-events-none"></div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
