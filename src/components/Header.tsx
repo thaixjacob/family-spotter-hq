@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X, Globe } from "lucide-react";
-import familySpotLogo from "@/assets/familyspot-logo.png";
+import familySpotLogo from "/lovable-uploads/32030f87-7b3e-4dce-9045-94a8807c8c76.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
