@@ -65,7 +65,7 @@ const About = () => {
           </div>
 
           <div className="relative">
-            <div className="relative z-10 space-y-6">
+            <div className="relative z-10">
               {/* Quote */}
               <div className="bg-card border border-border rounded-2xl p-6 shadow-sm">
                 <blockquote className="text-body text-muted-foreground italic text-center">
@@ -76,15 +76,6 @@ const About = () => {
                     {t('about.founder')}
                   </span>
                 </div>
-              </div>
-
-              {/* Family Image */}
-              <div className="bg-card border border-border rounded-2xl p-4 shadow-sm">
-                <img 
-                  src="/lovable-uploads/c6887655-fbce-431e-83c5-3bef2d8717ba.png" 
-                  alt="Family illustration" 
-                  className="w-full h-auto rounded-xl"
-                />
               </div>
             </div>
 
