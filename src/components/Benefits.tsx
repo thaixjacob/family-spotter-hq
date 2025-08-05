@@ -93,9 +93,13 @@ const Benefits = () => {
 
             {/* Phase 1 & 2: Category Dropdown */}
             {(animationPhase === 1 || animationPhase === 2) && (
-              <div className={`absolute top-16 left-16 transition-all duration-1000 ${
-                animationPhase === 2 ? 'scale-0 opacity-0' : 'scale-100 opacity-100 animate-fade-in'
-              }`}>
+              <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-1000 ${
+                animationPhase === 1 ? 'scale-50 opacity-50' : 
+                animationPhase === 2 ? 'scale-0 opacity-0' : 'scale-100 opacity-100'
+              }`}
+              style={{
+                animation: animationPhase === 1 ? 'scale-in 1s ease-out forwards' : undefined
+              }}>
                 <div className="bg-white rounded-3xl shadow-2xl border-4 border-secondary/30 p-4 min-w-64">
                   {categories.map((category, idx) => (
                     <div
@@ -144,12 +148,17 @@ const Benefits = () => {
 
             {/* Phase 5: Map Pins */}
             {showPins && (
-              <div className="absolute inset-0">
+              <div 
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                style={{
+                  backgroundImage: 'url(/lovable-uploads/1a8b0250-7e2c-46f9-ac78-7abc838cf2a7.png)'
+                }}
+              >
                 {[...Array(6)].map((_, i) => (
                   visiblePins.includes(i) && (
                     <div
                       key={i}
-                      className={`absolute ${
+                      className={`absolute z-10 ${
                         visiblePins.includes(i) ? 'animate-bounce' : 'opacity-0'
                       }`}
                       style={{
