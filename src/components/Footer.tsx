@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { Heart } from "lucide-react";
+import { Heart, Instagram, Music, Twitter, MessageCircle } from "lucide-react";
 const familySpotLogo = "/lovable-uploads/455bbe5b-d7a3-4af9-963c-00074b8af666.png";
 const Footer = () => {
   const { t } = useTranslation();
@@ -16,16 +16,23 @@ const Footer = () => {
       href: "#sobre"
     }]
   }, {
-    title: "Suporte",
+    title: "Siga-nos",
     links: [{
-      label: "Contato",
-      href: "#contato"
+      label: "Instagram",
+      href: "https://instagram.com/familyspot.app",
+      icon: Instagram
     }, {
-      label: "FAQ",
-      href: "#faq"
+      label: "TikTok", 
+      href: "https://tiktok.com/@familyspot.app",
+      icon: Music
     }, {
-      label: "Ajuda",
-      href: "#ajuda"
+      label: "Twitter/X",
+      href: "https://x.com/familyspot.app", 
+      icon: Twitter
+    }, {
+      label: "Threads",
+      href: "https://threads.net/@familyspot.app",
+      icon: MessageCircle
     }]
   }, {
     title: "Legal",
@@ -75,9 +82,12 @@ const Footer = () => {
                   <li key={link.label}>
                     <a 
                       href={link.href}
-                      className="text-body text-background/80 hover:text-secondary transition-colors"
+                      target={link.href.startsWith('http') ? '_blank' : '_self'}
+                      rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                      className="text-body text-background/80 hover:text-secondary transition-colors flex items-center space-x-2"
                     >
-                      {link.label}
+                      {link.icon && <link.icon className="w-4 h-4" />}
+                      <span>{link.label}</span>
                     </a>
                   </li>
                 ))}
