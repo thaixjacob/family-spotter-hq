@@ -36,7 +36,7 @@ const Footer = () => {
         },
         {
           label: t('footer.twitter'),
-          href: "https://x.com/familyspot.app", 
+          href: "https://x.com/familyspot_app", 
           icon: Twitter
         },
         {
