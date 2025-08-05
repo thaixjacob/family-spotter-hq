@@ -55,7 +55,7 @@ const HowItWorks = () => {
                   </div>
                   
                   {/* Step Number */}
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-foreground text-background rounded-full flex items-center justify-center text-small font-bold">
+                  <div className="hidden sm:flex absolute -top-2 -right-2 w-8 h-8 bg-foreground text-background rounded-full items-center justify-center text-small font-bold">
                     {index + 1}
                   </div>
 
