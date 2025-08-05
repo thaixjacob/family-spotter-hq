@@ -52,16 +52,16 @@ const HeroSection = () => {
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4">
                 <div className="flex items-center space-x-1.5">
                   <div className="w-2.5 h-2.5 bg-success rounded-full"></div>
-                  <span className="text-xs sm:text-small text-muted-foreground">100% gratuito</span>
+                  <span className="text-xs sm:text-small text-muted-foreground">{t('hero.trustIndicators.free')}</span>
                 </div>
                 <div className="flex items-center space-x-1.5">
                   <div className="w-2.5 h-2.5 bg-primary rounded-full"></div>
-                  <span className="text-xs sm:text-small text-muted-foreground">Verificado</span>
+                  <span className="text-xs sm:text-small text-muted-foreground">{t('hero.trustIndicators.verified')}</span>
                 </div>
               </div>
               <div className="flex items-center space-x-1.5">
                 <div className="w-2.5 h-2.5 bg-secondary rounded-full"></div>
-                <span className="text-xs sm:text-small text-muted-foreground">Sempre atualizado</span>
+                <span className="text-xs sm:text-small text-muted-foreground">{t('hero.trustIndicators.updated')}</span>
               </div>
             </div>
           </div>
@@ -71,7 +71,7 @@ const HeroSection = () => {
             <div className="relative z-10">
               <img
                 src="/lovable-uploads/b46a0d7b-97fa-4d8e-bd0f-8dce6c56987a.png"
-                alt="Família feliz explorando lugares incríveis"
+                alt={t('hero.imageAlt')}
                 className="w-full h-auto rounded-2xl shadow-2xl"
               />
             </div>

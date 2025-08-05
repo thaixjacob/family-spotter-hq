@@ -13,7 +13,13 @@
     "trustedBy": "Trusted by over",
     "parents": "parents",
     "verifiedPlaces": "verified places",
-    "activeCity": "active city"
+    "activeCity": "active city",
+    "imageAlt": "Happy family exploring amazing places",
+    "trustIndicators": {
+      "free": "100% free",
+      "verified": "Verified",
+      "updated": "Always updated"
+    }
   },
   "howItWorks": {
     "title": "How it works",

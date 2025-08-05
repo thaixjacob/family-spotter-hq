@@ -13,7 +13,13 @@
     "trustedBy": "Confiado por más de",
     "parents": "padres",
     "verifiedPlaces": "lugares verificados",
-    "activeCity": "ciudad activa"
+    "activeCity": "ciudad activa",
+    "imageAlt": "Familia feliz explorando lugares increíbles",
+    "trustIndicators": {
+      "free": "100% gratis",
+      "verified": "Verificado",
+      "updated": "Siempre actualizado"
+    }
   },
   "howItWorks": {
     "title": "Cómo funciona",

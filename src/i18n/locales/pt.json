@@ -13,7 +13,13 @@
     "trustedBy": "Confiado por mais de",
     "parents": "pais",
     "verifiedPlaces": "lugares verificados",
-    "activeCity": "cidade ativa"
+    "activeCity": "cidade ativa",
+    "imageAlt": "Família feliz explorando lugares incríveis",
+    "trustIndicators": {
+      "free": "100% gratuito",
+      "verified": "Verificado",
+      "updated": "Sempre atualizado"
+    }
   },
   "howItWorks": {
     "title": "Como Funciona o FamilySpot",
