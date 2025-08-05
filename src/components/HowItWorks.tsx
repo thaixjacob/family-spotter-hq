@@ -56,11 +56,6 @@ const HowItWorks = () => {
                     <IconComponent className="w-full h-full text-white" />
                   </div>
                   
-                  {/* Step Number */}
-                  <div className="hidden sm:flex absolute -top-2 -right-2 w-8 h-8 bg-foreground text-background rounded-full items-center justify-center text-small font-bold">
-                    {index + 1}
-                  </div>
-
                   {/* Content */}
                   <h3 className="text-h3 font-bold text-foreground mb-3">
                     {step.title}
