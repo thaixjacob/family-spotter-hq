@@ -106,7 +106,7 @@ const EmailCapture = () => {
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-4">
               <div className="relative">
-                <Input type="email" placeholder="seu@email.com" value={email} onChange={e => setEmail(e.target.value)} className="pl-12 h-12 text-body border-2 border-border focus:border-primary rounded-xl" disabled={isLoading} />
+                <Input type="email" placeholder="seu@email.com" value={email} onChange={e => setEmail(e.target.value)} className="pl-12 h-12 text-body border-2 border-border focus:border-primary rounded-full" disabled={isLoading} />
                 <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground" />
               </div>
 
