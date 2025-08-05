@@ -3,50 +3,67 @@ import { Heart, Instagram, Music, Twitter, MessageCircle } from "lucide-react";
 const familySpotLogo = "/lovable-uploads/455bbe5b-d7a3-4af9-963c-00074b8af666.png";
 const Footer = () => {
   const { t } = useTranslation();
-  const footerLinks = [{
-    title: "Produto",
-    links: [{
-      label: "Como Funciona",
-      href: "#como-funciona"
-    }, {
-      label: "Benefícios",
-      href: "#beneficios"
-    }, {
-      label: "Sobre",
-      href: "#sobre"
-    }]
-  }, {
-    title: "Siga-nos",
-    links: [{
-      label: "Instagram",
-      href: "https://instagram.com/familyspot.app",
-      icon: Instagram
-    }, {
-      label: "TikTok", 
-      href: "https://tiktok.com/@familyspot.app",
-      icon: Music
-    }, {
-      label: "Twitter/X",
-      href: "https://x.com/familyspot.app", 
-      icon: Twitter
-    }, {
-      label: "Threads",
-      href: "https://threads.net/@familyspot.app",
-      icon: MessageCircle
-    }]
-  }, {
-    title: "Legal",
-    links: [{
-      label: "Privacidade",
-      href: "#privacidade"
-    }, {
-      label: "Termos de Uso",
-      href: "#termos"
-    }, {
-      label: "Cookies",
-      href: "#cookies"
-    }]
-  }];
+  const footerLinks = [
+    {
+      title: t('footer.product'),
+      links: [
+        {
+          label: t('footer.howItWorks'),
+          href: "#como-funciona"
+        },
+        {
+          label: t('footer.benefits'),
+          href: "#beneficios"
+        },
+        {
+          label: t('footer.about'),
+          href: "#sobre"
+        }
+      ]
+    },
+    {
+      title: t('footer.followUs'),
+      links: [
+        {
+          label: t('footer.instagram'),
+          href: "https://instagram.com/familyspot.app",
+          icon: Instagram
+        },
+        {
+          label: t('footer.tiktok'), 
+          href: "https://tiktok.com/@familyspot.app",
+          icon: Music
+        },
+        {
+          label: t('footer.twitter'),
+          href: "https://x.com/familyspot.app", 
+          icon: Twitter
+        },
+        {
+          label: t('footer.threads'),
+          href: "https://threads.net/@familyspot.app",
+          icon: MessageCircle
+        }
+      ]
+    },
+    {
+      title: t('footer.legal'),
+      links: [
+        {
+          label: t('footer.privacy'),
+          href: "#privacidade"
+        },
+        {
+          label: t('footer.terms'),
+          href: "#termos"
+        },
+        {
+          label: t('footer.cookies'),
+          href: "#cookies"
+        }
+      ]
+    }
+  ];
   return <footer className="bg-foreground text-background">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Main Footer Content */}
@@ -61,14 +78,12 @@ const Footer = () => {
             </div>
             
             <p className="text-body text-background/80 mb-6 max-w-sm">
-              Conectando famílias através da descoberta de lugares incríveis 
-              para criar memórias inesquecíveis.
+              {t('footer.description')}
             </p>
             
             <div className="flex items-center space-x-2 text-small text-background/60">
-              <span>Feito com</span>
+              <span>{t('footer.madeWithLove')}</span>
               <Heart className="w-4 h-4 text-primary fill-current" />
-              <span>para famílias</span>
             </div>
           </div>
 
@@ -99,14 +114,14 @@ const Footer = () => {
         <div className="border-t border-background/20 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-small text-background/60 text-center md:text-left">
-              © 2025 FAMILYSPOT - Descubra lugares familiares
+              {t('footer.copyright')}
             </p>
             
             <div className="flex items-center space-x-6">
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-success rounded-full"></div>
                 <span className="text-small text-background/60">
-                  Plataforma em desenvolvimento
+                  {t('footer.developmentStatus')}
                 </span>
               </div>
             </div>

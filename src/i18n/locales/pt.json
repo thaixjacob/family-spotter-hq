@@ -116,22 +116,22 @@
     "successToastDesc": "Você foi adicionado à nossa lista. Em breve você receberá novidades!"
   },
   "footer": {
-    "description": "Conectando famílias aos melhores lugares da cidade",
-    "madeWithLove": "Feito com ❤️ para famílias brasileiras",
+    "description": "Conectando famílias através da descoberta de lugares incríveis para criar memórias inesquecíveis.",
+    "madeWithLove": "Feito com ❤️ para famílias",
     "product": "Produto",
-    "aboutUs": "Sobre nós",
-    "howItWorks": "Como funciona",
-    "pricing": "Preços",
+    "howItWorks": "Como Funciona",
+    "benefits": "Benefícios",
+    "about": "Sobre",
     "followUs": "Siga-nos",
-    "help": "Ajuda",
-    "contact": "Contato",
-    "community": "Comunidade",
+    "instagram": "Instagram",
+    "tiktok": "TikTok",
+    "twitter": "Twitter/X",
+    "threads": "Threads",
     "legal": "Legal",
     "privacy": "Privacidade",
-    "terms": "Termos de uso",
+    "terms": "Termos de Uso",
     "cookies": "Cookies",
-    "copyright": "© 2024 FamilySpot. Todos os direitos reservados.",
-    "status": "Status da plataforma",
-    "operational": "Operacional"
+    "copyright": "© 2025 FAMILYSPOT - Descubra lugares familiares",
+    "developmentStatus": "Plataforma em desenvolvimento"
   }
 }
