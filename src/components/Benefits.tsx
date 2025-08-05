@@ -56,7 +56,7 @@ const Benefits = () => {
       setShowPins(true);
       
       // Show pins one by one with pop-up effect
-      for (let i = 0; i < 6; i++) {
+      for (let i = 0; i < 10; i++) {
         await new Promise(resolve => setTimeout(resolve, 300));
         setVisiblePins(prev => [...prev, i]);
       }
@@ -93,7 +93,7 @@ const Benefits = () => {
 
             {/* Phase 1 & 2: Category Dropdown */}
             {(animationPhase === 1 || animationPhase === 2) && (
-              <div className={`absolute top-16 left-16 transition-all duration-1000 ${
+              <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-1000 ${
                 animationPhase === 2 ? 'scale-0 opacity-0' : 'scale-100 opacity-100 animate-fade-in'
               }`}>
                 <div className="bg-white rounded-3xl shadow-2xl border-4 border-secondary/30 p-4 min-w-64">
@@ -145,16 +145,29 @@ const Benefits = () => {
             {/* Phase 5: Map Pins */}
             {showPins && (
               <div className="absolute inset-0">
-                {[...Array(6)].map((_, i) => (
-                  visiblePins.includes(i) && (
+                {[...Array(10)].map((_, i) => {
+                  const positions = [
+                    { left: '10%', top: '15%' },
+                    { left: '75%', top: '25%' },
+                    { left: '25%', top: '40%' },
+                    { left: '85%', top: '55%' },
+                    { left: '40%', top: '20%' },
+                    { left: '60%', top: '70%' },
+                    { left: '15%', top: '75%' },
+                    { left: '70%', top: '45%' },
+                    { left: '45%', top: '60%' },
+                    { left: '30%', top: '80%' }
+                  ];
+                  
+                  return visiblePins.includes(i) && (
                     <div
                       key={i}
                       className={`absolute ${
                         visiblePins.includes(i) ? 'animate-bounce' : 'opacity-0'
                       }`}
                       style={{
-                        left: `${15 + (i * 12)}%`,
-                        top: `${20 + ((i % 3) * 20)}%`,
+                        left: positions[i].left,
+                        top: positions[i].top,
                         animationDuration: '1.5s'
                       }}
                     >
@@ -164,8 +177,8 @@ const Benefits = () => {
                         <MapPin className="w-8 h-8 text-white drop-shadow-lg" />
                       </div>
                     </div>
-                  )
-                ))}
+                  );
+                })}
               </div>
             )}
           </div>
