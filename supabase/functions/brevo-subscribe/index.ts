@@ -19,6 +19,7 @@ const handler = async (req: Request): Promise<Response> => {
 
   try {
     const { email, language, acceptedTerms }: SubscribeRequest = await req.json();
+    console.log(`Processing subscription for email: ${email}`);
 
     if (!email || !acceptedTerms) {
       return new Response(
@@ -33,19 +34,27 @@ const handler = async (req: Request): Promise<Response> => {
     const supabase = createClient(supabaseUrl, supabaseKey);
 
     // Check if email already exists
-    const { data: existingUser } = await supabase
+    const { data: existingUser, error: selectError } = await supabase
       .from('email_subscribers')
       .select('id, is_confirmed')
       .eq('email', email)
-      .single();
+      .maybeSingle();
+
+    if (selectError) {
+      console.error('Error checking existing user:', selectError);
+    }
+
+    console.log(`Existing user check result:`, existingUser);
 
     if (existingUser) {
       if (existingUser.is_confirmed) {
+        console.log(`Email ${email} already confirmed, returning error`);
         return new Response(
           JSON.stringify({ error: 'Email already subscribed' }),
           { status: 409, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
         );
       } else {
+        console.log(`Email ${email} exists but not confirmed, updating...`);
         // Update existing unconfirmed subscription
         const { error: updateError } = await supabase
           .from('email_subscribers')
@@ -65,6 +74,7 @@ const handler = async (req: Request): Promise<Response> => {
         }
       }
     } else {
+      console.log(`Email ${email} is new, creating subscription...`);
       // Create new subscription
       const { error: insertError } = await supabase
         .from('email_subscribers')
@@ -88,28 +98,36 @@ const handler = async (req: Request): Promise<Response> => {
     const brevoApiKey = Deno.env.get('BREVO_API_KEY');
     const brevoListId = Deno.env.get('BREVO_LIST_ID');
 
+    console.log(`Brevo integration check - API Key exists: ${!!brevoApiKey}, List ID: ${brevoListId}`);
+
     if (brevoApiKey && brevoListId) {
       try {
+        console.log(`Adding ${email} to Brevo list ${brevoListId}`);
+        const brevoPayload = {
+          email,
+          listIds: [parseInt(brevoListId)],
+          attributes: {
+            LANGUAGE: language.toUpperCase(),
+            ACCEPTED_TERMS: acceptedTerms
+          },
+          updateEnabled: true
+        };
+        console.log('Brevo payload:', JSON.stringify(brevoPayload));
+
         const brevoResponse = await fetch('https://api.brevo.com/v3/contacts', {
           method: 'POST',
           headers: {
             'api-key': brevoApiKey,
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({
-            email,
-            listIds: [parseInt(brevoListId)],
-            attributes: {
-              LANGUAGE: language.toUpperCase(),
-              ACCEPTED_TERMS: acceptedTerms
-            },
-            updateEnabled: true
-          }),
+          body: JSON.stringify(brevoPayload),
         });
 
+        const responseText = await brevoResponse.text();
+        console.log(`Brevo response status: ${brevoResponse.status}, body: ${responseText}`);
+
         if (!brevoResponse.ok) {
-          const brevoError = await brevoResponse.text();
-          console.error('Brevo API error:', brevoError);
+          console.error('Brevo API error:', responseText);
           // Don't fail the request if Brevo fails, just log it
         } else {
           console.log('Successfully added to Brevo list');
@@ -118,9 +136,12 @@ const handler = async (req: Request): Promise<Response> => {
         console.error('Error calling Brevo API:', brevoError);
         // Don't fail the request if Brevo fails, just log it
       }
+    } else {
+      console.log('Brevo integration not configured - missing API key or list ID');
     }
 
     // Update confirmation status in our database
+    console.log(`Confirming subscription for ${email}`);
     const { error: confirmError } = await supabase
       .from('email_subscribers')
       .update({
@@ -131,6 +152,8 @@ const handler = async (req: Request): Promise<Response> => {
 
     if (confirmError) {
       console.error('Error confirming subscription:', confirmError);
+    } else {
+      console.log(`Successfully confirmed subscription for ${email}`);
     }
 
     return new Response(
