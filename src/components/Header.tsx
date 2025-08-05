@@ -17,6 +17,7 @@ const Header = () => {
   const navItems = [
     { label: t('header.about'), href: '#sobre' },
     { label: t('header.howItWorks'), href: '#como-funciona' },
+    { label: t('header.benefits'), href: '#beneficios' },
     { label: t('header.contact'), href: '#contato' }
   ];
 
