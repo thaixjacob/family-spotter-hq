@@ -63,24 +63,6 @@ const Benefits = () => {
           })}
         </div>
 
-        {/* Stats Section */}
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
-          {[
-            { number: "500+", label: "Lugares cadastrados" },
-            { number: "50+", label: "Cidades cobertas" },
-            { number: "1000+", label: "Famílias conectadas" },
-            { number: "24h", label: "Suporte da comunidade" }
-          ].map((stat) => (
-            <div key={stat.label} className="text-center">
-              <div className="text-h2 font-bold text-primary mb-2">
-                {stat.number}
-              </div>
-              <div className="text-small text-muted-foreground">
-                {stat.label}
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
