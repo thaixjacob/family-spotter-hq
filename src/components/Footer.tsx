@@ -1,6 +1,8 @@
+import { useTranslation } from 'react-i18next';
 import { Heart } from "lucide-react";
 const familySpotLogo = "/lovable-uploads/455bbe5b-d7a3-4af9-963c-00074b8af666.png";
 const Footer = () => {
+  const { t } = useTranslation();
   const footerLinks = [{
     title: "Produto",
     links: [{

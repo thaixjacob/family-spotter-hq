@@ -1,8 +1,10 @@
+import { useTranslation } from 'react-i18next';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-family.jpg";
 
 const HeroSection = () => {
+  const { t } = useTranslation();
   const scrollToEmailCapture = () => {
     const emailSection = document.getElementById('email-capture');
     emailSection?.scrollIntoView({ behavior: 'smooth' });
@@ -16,16 +18,11 @@ const HeroSection = () => {
           <div className="space-y-8 text-center lg:text-left">
             <div className="space-y-4">
               <h1 className="text-h1 font-bold text-foreground leading-tight">
-                Descubra os{" "}
-                <span className="text-transparent bg-gradient-to-r from-primary to-secondary bg-clip-text">
-                  Melhores Lugares
-                </span>{" "}
-                para sua Família
+                {t('hero.title')}
               </h1>
               
               <p className="text-body text-muted-foreground max-w-lg mx-auto lg:mx-0 px-4 sm:px-0">
-                Uma comunidade de pais ajudando pais a encontrar lugares seguros, 
-                divertidos e adequados para crianças em suas cidades
+                {t('hero.subtitle')}
               </p>
             </div>
 
@@ -36,7 +33,7 @@ const HeroSection = () => {
                 onClick={scrollToEmailCapture}
                 className="group text-sm sm:text-base px-4 sm:px-6"
               >
-                Me notifique do lançamento
+                {t('hero.notifyLaunch')}
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               
@@ -46,7 +43,7 @@ const HeroSection = () => {
                 onClick={() => document.getElementById('como-funciona')?.scrollIntoView({ behavior: 'smooth' })}
                 className="text-sm sm:text-base px-4 sm:px-6"
               >
-                Saiba mais
+                {t('hero.learnMore')}
               </Button>
             </div>
 

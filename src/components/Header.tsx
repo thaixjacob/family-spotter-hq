@@ -1,11 +1,12 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Button } from "@/components/ui/button";
 import { Menu, X, Globe } from "lucide-react";
 import familySpotLogo from "/lovable-uploads/32030f87-7b3e-4dce-9045-94a8807c8c76.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [currentLanguage, setCurrentLanguage] = useState('pt');
+  const { t, i18n } = useTranslation();
 
   const languages = [
     { code: 'pt', label: 'Português' },
@@ -14,9 +15,9 @@ const Header = () => {
   ];
 
   const navItems = [
-    { label: 'Sobre', href: '#sobre' },
-    { label: 'Como Funciona', href: '#como-funciona' },
-    { label: 'Contato', href: '#contato' }
+    { label: t('header.about'), href: '#sobre' },
+    { label: t('header.howItWorks'), href: '#como-funciona' },
+    { label: t('header.contact'), href: '#contato' }
   ];
 
   return (
@@ -55,16 +56,16 @@ const Header = () => {
                 className="flex items-center space-x-1"
               >
                 <Globe className="w-4 h-4" />
-                <span className="text-small">{languages.find(l => l.code === currentLanguage)?.label}</span>
+                <span className="text-small">{languages.find(l => l.code === i18n.language)?.label}</span>
               </Button>
               
               <div className="absolute top-full right-0 mt-2 py-2 w-32 bg-card border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 {languages.map((lang) => (
                   <button
                     key={lang.code}
-                    onClick={() => setCurrentLanguage(lang.code)}
+                    onClick={() => i18n.changeLanguage(lang.code)}
                     className={`w-full px-3 py-2 text-small text-left hover:bg-muted transition-colors ${
-                      currentLanguage === lang.code ? 'text-secondary font-medium' : 'text-foreground'
+                      i18n.language === lang.code ? 'text-secondary font-medium' : 'text-foreground'
                     }`}
                   >
                     {lang.label}
@@ -101,17 +102,17 @@ const Header = () => {
               ))}
               
               <div className="pt-2 border-t border-border">
-                <p className="text-small text-muted-foreground mb-2">Idioma:</p>
+                <p className="text-small text-muted-foreground mb-2">{t('header.language')}:</p>
                 <div className="flex flex-col space-y-2">
                   {languages.map((lang) => (
                     <button
                       key={lang.code}
                       onClick={() => {
-                        setCurrentLanguage(lang.code);
+                        i18n.changeLanguage(lang.code);
                         setIsMenuOpen(false);
                       }}
                       className={`text-small text-left ${
-                        currentLanguage === lang.code ? 'text-secondary font-medium' : 'text-foreground'
+                        i18n.language === lang.code ? 'text-secondary font-medium' : 'text-foreground'
                       }`}
                     >
                       {lang.label}

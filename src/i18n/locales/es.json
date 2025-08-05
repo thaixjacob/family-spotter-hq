@@ -1,0 +1,85 @@
+{
+  "header": {
+    "about": "Acerca de",
+    "howItWorks": "Cómo Funciona",
+    "contact": "Contacto",
+    "language": "Idioma"
+  },
+  "hero": {
+    "title": "Descubre los mejores lugares para familias en tu ciudad",
+    "subtitle": "Encuentra parques, restaurantes, actividades y servicios verificados por la comunidad de padres. Porque toda familia merece momentos especiales.",
+    "notifyLaunch": "Notificarme del lanzamiento",
+    "learnMore": "Saber más",
+    "trustedBy": "Confiado por más de",
+    "parents": "padres",
+    "verifiedPlaces": "lugares verificados",
+    "activeCity": "ciudad activa"
+  },
+  "howItWorks": {
+    "title": "Cómo funciona",
+    "subtitle": "Una plataforma simple y confiable para que las familias descubran los mejores lugares de la ciudad",
+    "steps": {
+      "explore": {
+        "title": "Explora",
+        "description": "Navega por categorías como parques, restaurantes amigables para niños, actividades culturales y mucho más."
+      },
+      "trust": {
+        "title": "Confía",
+        "description": "Todos los lugares son verificados y evaluados por otros padres de la comunidad local."
+      },
+      "contribute": {
+        "title": "Contribuye",
+        "description": "Comparte tus descubrimientos y ayuda a otras familias a encontrar lugares increíbles."
+      }
+    },
+    "earlyTester": "¡Sé uno de los primeros probadores de nuestra plataforma!"
+  },
+  "benefits": {
+    "title": "¿Por qué elegir FamilySpot?",
+    "subtitle": "Creamos una solución pensada especialmente para familias, con funcionalidades que facilitan el descubrimiento de lugares seguros y adecuados para niños.",
+    "community": {
+      "title": "Comunidad Verificada",
+      "description": "Reseñas y consejos de padres reales de tu región"
+    },
+    "ageFilter": {
+      "title": "Filtros por Edad",
+      "description": "Encuentra lugares adecuados para la edad de tus hijos"
+    },
+    "updated": {
+      "title": "Siempre Actualizado",
+      "description": "Información en tiempo real sobre horarios, precios y disponibilidad"
+    }
+  },
+  "emailCapture": {
+    "title": "Sé el primero en saber",
+    "subtitle": "Regístrate para recibir noticias sobre el lanzamiento de la plataforma y ser uno de los primeros en probarla.",
+    "emailPlaceholder": "Ingresa tu email",
+    "acceptTerms": "Acepto recibir emails sobre FamilySpot",
+    "notify": "Notificarme",
+    "loading": "Enviando...",
+    "success": "¡Email registrado con éxito!",
+    "successMessage": "¡Gracias! Recibirás una notificación tan pronto como la plataforma esté disponible.",
+    "signupAgain": "Registrar otro email",
+    "invalidEmail": "Por favor, ingresa un email válido",
+    "acceptTermsRequired": "Es necesario aceptar los términos para continuar"
+  },
+  "footer": {
+    "description": "Conectando familias con los mejores lugares de la ciudad",
+    "madeWithLove": "Hecho con ❤️ para familias",
+    "product": "Producto",
+    "aboutUs": "Acerca de nosotros",
+    "howItWorks": "Cómo funciona",
+    "pricing": "Precios",
+    "support": "Soporte",
+    "help": "Ayuda",
+    "contact": "Contacto",
+    "community": "Comunidad",
+    "legal": "Legal",
+    "privacy": "Privacidad",
+    "terms": "Términos de uso",
+    "cookies": "Cookies",
+    "copyright": "© 2024 FamilySpot. Todos los derechos reservados.",
+    "status": "Estado de la plataforma",
+    "operational": "Operacional"
+  }
+}

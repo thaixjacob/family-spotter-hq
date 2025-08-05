@@ -1,0 +1,85 @@
+{
+  "header": {
+    "about": "About",
+    "howItWorks": "How It Works",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "hero": {
+    "title": "Discover the best family places in your city",
+    "subtitle": "Find parks, restaurants, activities and services verified by the parent community. Because every family deserves special moments.",
+    "notifyLaunch": "Notify me of launch",
+    "learnMore": "Learn more",
+    "trustedBy": "Trusted by over",
+    "parents": "parents",
+    "verifiedPlaces": "verified places",
+    "activeCity": "active city"
+  },
+  "howItWorks": {
+    "title": "How it works",
+    "subtitle": "A simple and reliable platform for families to discover the best places in the city",
+    "steps": {
+      "explore": {
+        "title": "Explore",
+        "description": "Browse categories like parks, kid-friendly restaurants, cultural activities and much more."
+      },
+      "trust": {
+        "title": "Trust",
+        "description": "All places are verified and rated by other parents in the local community."
+      },
+      "contribute": {
+        "title": "Contribute",
+        "description": "Share your discoveries and help other families find amazing places."
+      }
+    },
+    "earlyTester": "Be one of the first testers of our platform!"
+  },
+  "benefits": {
+    "title": "Why choose FamilySpot?",
+    "subtitle": "We created a solution designed especially for families, with features that make it easy to discover safe and suitable places for children.",
+    "community": {
+      "title": "Verified Community",
+      "description": "Reviews and tips from real parents in your area"
+    },
+    "ageFilter": {
+      "title": "Age Filters",
+      "description": "Find places suitable for your children's age"
+    },
+    "updated": {
+      "title": "Always Updated",
+      "description": "Real-time information about schedules, prices and availability"
+    }
+  },
+  "emailCapture": {
+    "title": "Be the first to know",
+    "subtitle": "Sign up to receive news about the platform launch and be one of the first to test it.",
+    "emailPlaceholder": "Enter your email",
+    "acceptTerms": "I accept to receive emails about FamilySpot",
+    "notify": "Notify me",
+    "loading": "Sending...",
+    "success": "Email registered successfully!",
+    "successMessage": "Thank you! You will receive a notification as soon as the platform is available.",
+    "signupAgain": "Register another email",
+    "invalidEmail": "Please enter a valid email",
+    "acceptTermsRequired": "You must accept the terms to continue"
+  },
+  "footer": {
+    "description": "Connecting families to the best places in the city",
+    "madeWithLove": "Made with ❤️ for families",
+    "product": "Product",
+    "aboutUs": "About us",
+    "howItWorks": "How it works",
+    "pricing": "Pricing",
+    "support": "Support",
+    "help": "Help",
+    "contact": "Contact",
+    "community": "Community",
+    "legal": "Legal",
+    "privacy": "Privacy",
+    "terms": "Terms of use",
+    "cookies": "Cookies",
+    "copyright": "© 2024 FamilySpot. All rights reserved.",
+    "status": "Platform status",
+    "operational": "Operational"
+  }
+}
