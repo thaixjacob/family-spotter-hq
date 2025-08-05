@@ -50,18 +50,18 @@ const HeroSection = () => {
             </div>
 
             {/* Trust Indicators */}
-            <div className="flex items-center justify-center lg:justify-start space-x-6 pt-8">
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-6 pt-8">
               <div className="flex items-center space-x-2">
                 <div className="w-3 h-3 bg-success rounded-full"></div>
-                <span className="text-small text-muted-foreground">100% gratuito</span>
+                <span className="text-small text-muted-foreground whitespace-nowrap">100% gratuito</span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-3 h-3 bg-primary rounded-full"></div>
-                <span className="text-small text-muted-foreground">Verificado pela comunidade</span>
+                <span className="text-small text-muted-foreground whitespace-nowrap">Verificado pela comunidade</span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-3 h-3 bg-secondary rounded-full"></div>
-                <span className="text-small text-muted-foreground">Sempre atualizado</span>
+                <span className="text-small text-muted-foreground whitespace-nowrap">Sempre atualizado</span>
               </div>
             </div>
           </div>
@@ -77,18 +77,18 @@ const HeroSection = () => {
             </div>
             
             {/* Decorative Elements */}
-            <div className="absolute -top-6 -right-6 w-20 h-20 bg-gradient-to-br from-accent to-accent-dark rounded-full opacity-20 blur-xl"></div>
-            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-gradient-to-br from-primary to-primary-dark rounded-full opacity-20 blur-xl"></div>
-            <div className="absolute top-1/2 -right-4 w-16 h-16 bg-gradient-to-br from-secondary to-secondary-dark rounded-full opacity-30 blur-lg"></div>
+            <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-accent to-accent-dark rounded-full opacity-20 blur-xl"></div>
+            <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-gradient-to-br from-primary to-primary-dark rounded-full opacity-20 blur-xl"></div>
+            <div className="absolute top-1/2 -right-2 w-12 h-12 bg-gradient-to-br from-secondary to-secondary-dark rounded-full opacity-30 blur-lg"></div>
           </div>
         </div>
       </div>
 
       {/* Background Decorations */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-gradient-to-br from-primary/10 to-transparent rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-gradient-to-br from-secondary/10 to-transparent rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-accent/5 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute top-20 left-4 w-48 h-48 bg-gradient-to-br from-primary/10 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-4 w-64 h-64 bg-gradient-to-br from-secondary/10 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-br from-accent/5 to-transparent rounded-full blur-3xl"></div>
       </div>
     </section>
   );
