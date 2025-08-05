@@ -10,7 +10,7 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-muted/30 to-secondary/5">
-      <div className="container mx-auto px-4 lg:px-8 py-20">
+      <div className="container mx-auto px-2 sm:px-4 lg:px-8 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content Side */}
           <div className="space-y-8 text-center lg:text-left">
@@ -23,45 +23,48 @@ const HeroSection = () => {
                 para sua Família
               </h1>
               
-              <p className="text-body text-muted-foreground max-w-xl mx-auto lg:mx-0">
+              <p className="text-body text-muted-foreground max-w-lg mx-auto lg:mx-0 px-4 sm:px-0">
                 Uma comunidade de pais ajudando pais a encontrar lugares seguros, 
-                divertidos e adequados para crianças em suas cidades e no mundo afora
+                divertidos e adequados para crianças em suas cidades
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col gap-3 sm:gap-4 justify-center lg:justify-start">
               <Button 
                 variant="hero" 
                 size="lg"
                 onClick={scrollToEmailCapture}
-                className="group"
+                className="group text-sm sm:text-base px-4 sm:px-6"
               >
-                Quero ser notificado do lançamento
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                Me notifique do lançamento
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               
               <Button 
                 variant="outline" 
                 size="lg"
                 onClick={() => document.getElementById('como-funciona')?.scrollIntoView({ behavior: 'smooth' })}
+                className="text-sm sm:text-base px-4 sm:px-6"
               >
                 Saiba mais
               </Button>
             </div>
 
             {/* Trust Indicators */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-6 pt-8">
-              <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 bg-success rounded-full"></div>
-                <span className="text-small text-muted-foreground whitespace-nowrap">100% gratuito</span>
+            <div className="flex flex-col gap-2 items-center justify-center lg:justify-start pt-6 px-4 sm:px-0">
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4">
+                <div className="flex items-center space-x-1.5">
+                  <div className="w-2.5 h-2.5 bg-success rounded-full"></div>
+                  <span className="text-xs sm:text-small text-muted-foreground">100% gratuito</span>
+                </div>
+                <div className="flex items-center space-x-1.5">
+                  <div className="w-2.5 h-2.5 bg-primary rounded-full"></div>
+                  <span className="text-xs sm:text-small text-muted-foreground">Verificado</span>
+                </div>
               </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 bg-primary rounded-full"></div>
-                <span className="text-small text-muted-foreground whitespace-nowrap">Verificado pela comunidade</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 bg-secondary rounded-full"></div>
-                <span className="text-small text-muted-foreground whitespace-nowrap">Sempre atualizado</span>
+              <div className="flex items-center space-x-1.5">
+                <div className="w-2.5 h-2.5 bg-secondary rounded-full"></div>
+                <span className="text-xs sm:text-small text-muted-foreground">Sempre atualizado</span>
               </div>
             </div>
           </div>
