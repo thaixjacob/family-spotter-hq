@@ -77,6 +77,15 @@ const About = () => {
                   </span>
                 </div>
               </div>
+              
+              {/* Mission Image */}
+              <div className="mt-6">
+                <img 
+                  src="/lovable-uploads/b4ce4722-121e-4c0a-a69f-348b13413096.png" 
+                  alt="Ilustração de mapa com aventuras familiares"
+                  className="w-full max-w-md mx-auto rounded-xl shadow-sm"
+                />
+              </div>
             </div>
 
             {/* Decorative Elements */}
