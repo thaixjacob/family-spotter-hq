@@ -13,15 +13,19 @@ interface SubscribeRequest {
 }
 
 const handler = async (req: Request): Promise<Response> => {
+  // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
+    console.log('Function started - brevo-subscribe');
+    
     const { email, language, acceptedTerms }: SubscribeRequest = await req.json();
-    console.log(`Processing subscription for email: ${email}`);
+    console.log(`Processing subscription for email: ${email}, language: ${language}, acceptedTerms: ${acceptedTerms}`);
 
     if (!email || !acceptedTerms) {
+      console.log('Validation failed - missing email or terms acceptance');
       return new Response(
         JSON.stringify({ error: 'Email and terms acceptance are required' }),
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
@@ -29,11 +33,23 @@ const handler = async (req: Request): Promise<Response> => {
     }
 
     // Initialize Supabase client
-    const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
-    const supabaseKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
+    const supabaseUrl = Deno.env.get('SUPABASE_URL');
+    const supabaseKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
+    
+    console.log(`Supabase config check - URL exists: ${!!supabaseUrl}, Key exists: ${!!supabaseKey}`);
+    
+    if (!supabaseUrl || !supabaseKey) {
+      console.error('Missing Supabase configuration');
+      return new Response(
+        JSON.stringify({ error: 'Server configuration error' }),
+        { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
     const supabase = createClient(supabaseUrl, supabaseKey);
 
     // Check if email already exists
+    console.log(`Checking if email ${email} already exists`);
     const { data: existingUser, error: selectError } = await supabase
       .from('email_subscribers')
       .select('id, is_confirmed')
@@ -42,13 +58,17 @@ const handler = async (req: Request): Promise<Response> => {
 
     if (selectError) {
       console.error('Error checking existing user:', selectError);
+      return new Response(
+        JSON.stringify({ error: 'Database error while checking user' }),
+        { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
     }
 
     console.log(`Existing user check result:`, existingUser);
 
     if (existingUser) {
       if (existingUser.is_confirmed) {
-        console.log(`Email ${email} already confirmed, returning error`);
+        console.log(`Email ${email} already confirmed, returning conflict`);
         return new Response(
           JSON.stringify({ error: 'Email already subscribed' }),
           { status: 409, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
@@ -161,10 +181,15 @@ const handler = async (req: Request): Promise<Response> => {
 
     if (confirmError) {
       console.error('Error confirming subscription:', confirmError);
+      return new Response(
+        JSON.stringify({ error: 'Failed to confirm subscription' }),
+        { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
     } else {
       console.log(`Successfully confirmed subscription for ${email}`);
     }
 
+    console.log('Function completed successfully');
     return new Response(
       JSON.stringify({ 
         success: true, 
