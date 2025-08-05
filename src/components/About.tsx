@@ -64,31 +64,8 @@ const About = () => {
             </div>
           </div>
 
-          {/* Visual Side */}
           <div className="relative">
-            <div className="relative z-10 space-y-6">
-              {/* Main Image Container */}
-              <div className="bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 rounded-3xl p-8 border-4 border-white/50 shadow-2xl">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-4">
-                    <div className="w-full h-20 bg-white rounded-2xl shadow-lg flex items-center justify-center">
-                      <MapPin className="w-8 h-8 text-primary" />
-                    </div>
-                    <div className="w-full h-16 bg-white rounded-2xl shadow-lg flex items-center justify-center">
-                      <Baby className="w-6 h-6 text-secondary" />
-                    </div>
-                  </div>
-                  <div className="space-y-4">
-                    <div className="w-full h-16 bg-white rounded-2xl shadow-lg flex items-center justify-center">
-                      <Users className="w-6 h-6 text-accent" />
-                    </div>
-                    <div className="w-full h-20 bg-white rounded-2xl shadow-lg flex items-center justify-center">
-                      <Heart className="w-8 h-8 text-primary fill-current" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
+            <div className="relative z-10">
               {/* Quote */}
               <div className="bg-card border border-border rounded-2xl p-6 shadow-sm">
                 <blockquote className="text-body text-muted-foreground italic text-center">
