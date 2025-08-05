@@ -116,7 +116,27 @@
       "updated": {
         "title": "Updated Information",
         "description": "The community keeps information always fresh, with current schedules, prices and conditions."
+  },
+  "about": {
+    "title": "Our Story",
+    "subtitle": "Discover the journey that gave birth to FamilySpot",
+    "story": {
+      "newMom": {
+        "title": "A First-Time Mom",
+        "description": "It all started with a first-time mom who, after giving birth to her first child, realized she barely knew her own city. Where to take the baby? Which places were safe and suitable? These simple questions revealed a major problem."
+      },
+      "discovery": {
+        "title": "The Problem Intensifies",
+        "description": "When it came time to travel, this problem became even more evident. In unfamiliar cities, finding appropriate places for children became a real impossible mission, full of trial and error."
+      },
+      "solution": {
+        "title": "FamilySpot is Born",
+        "description": "It was from this real need that the idea of FamilySpot emerged: a collaborative map where parents share discoveries, rate places, and help other families find safe and suitable spaces for their children."
       }
+    },
+    "quote": "If I had had FamilySpot when my son was born, I would have discovered my city in a completely different way.",
+    "founder": "FamilySpot Founder"
+  }
     },
     "categories": {
       "cafes": "Cafés",

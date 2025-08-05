@@ -116,7 +116,27 @@
       "updated": {
         "title": "Información Actualizada",
         "description": "La comunidad mantiene la información siempre fresca, con horarios, precios y condiciones actuales."
+  },
+  "about": {
+    "title": "Nuestra Historia",
+    "subtitle": "Descubre el viaje que dio origen a FamilySpot",
+    "story": {
+      "newMom": {
+        "title": "Una Madre Primeriza",
+        "description": "Todo comenzó con una madre primeriza que, al dar a luz a su primer hijo, se dio cuenta de que apenas conocía su propia ciudad. ¿Dónde llevar al bebé? ¿Qué lugares eran seguros y adecuados? Estas simples preguntas revelaron un gran problema."
+      },
+      "discovery": {
+        "title": "El Problema se Intensifica",
+        "description": "Cuando llegaba el momento de viajar, este problema se hacía aún más evidente. En ciudades desconocidas, encontrar lugares apropiados para niños se convertía en una verdadera misión imposible, llena de ensayo y error."
+      },
+      "solution": {
+        "title": "Nace FamilySpot",
+        "description": "Fue de esta necesidad real que surgió la idea de FamilySpot: un mapa colaborativo donde los padres comparten descubrimientos, califican lugares y ayudan a otras familias a encontrar espacios seguros y adecuados para sus hijos."
       }
+    },
+    "quote": "Si hubiera tenido FamilySpot cuando nació mi hijo, habría descubierto mi ciudad de una manera completamente diferente.",
+    "founder": "Fundadora de FamilySpot"
+  }
     },
     "categories": {
       "cafes": "Cafés",

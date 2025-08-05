@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
+import About from "@/components/About";
 import HowItWorks from "@/components/HowItWorks";
 import Benefits from "@/components/Benefits";
 import FloatingCircles from "@/components/FloatingCircles";
@@ -15,6 +16,7 @@ const Index = () => {
           <FloatingCircles variant="primary" />
           <HeroSection />
         </div>
+        <About />
         <HowItWorks />
         <Benefits />
         <div className="relative">

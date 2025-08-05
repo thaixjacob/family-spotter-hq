@@ -97,7 +97,27 @@
       "contribute": {
         "title": "Contribua",
         "description": "Adicione, edite e avalie lugares que você conhece"
+  },
+  "about": {
+    "title": "Nossa História",
+    "subtitle": "Conheça a jornada que deu origem ao FamilySpot",
+    "story": {
+      "newMom": {
+        "title": "Uma Mãe de Primeira Viagem",
+        "description": "Tudo começou com uma mãe de primeira viagem que, ao dar à luz seu primeiro filho, se deu conta de que mal conhecia sua própria cidade. Onde levar o bebê? Quais lugares eram seguros e adequados? Essas perguntas simples revelaram um grande problema."
+      },
+      "discovery": {
+        "title": "O Problema se Intensifica",
+        "description": "Quando chegava a hora de viajar, esse problema ficava ainda mais evidente. Em cidades desconhecidas, encontrar lugares apropriados para crianças se tornava uma verdadeira missão impossível, cheia de tentativas e erros."
+      },
+      "solution": {
+        "title": "Nasce o FamilySpot",
+        "description": "Foi dessa necessidade real que surgiu a ideia do FamilySpot: um mapa colaborativo onde pais compartilham descobertas, avaliam lugares e ajudam outras famílias a encontrarem espaços seguros e adequados para seus filhos."
       }
+    },
+    "quote": "Se eu tivesse tido o FamilySpot quando meu filho nasceu, teria descoberto minha cidade de uma forma completamente diferente.",
+    "founder": "Fundadora do FamilySpot"
+  }
     },
     "development": "Plataforma em desenvolvimento - seja um dos primeiros a testar!"
   },
