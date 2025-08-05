@@ -1,5 +1,5 @@
 import { Heart } from "lucide-react";
-import familySpotLogo from "@/assets/familyspot-logo.png";
+const familySpotLogo = "/lovable-uploads/455bbe5b-d7a3-4af9-963c-00074b8af666.png";
 const Footer = () => {
   const footerLinks = [{
     title: "Produto",
@@ -45,7 +45,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
-              <img src={familySpotLogo} alt="FamilySpot" className="h-8 w-auto filter brightness-0 invert" />
+              <img src={familySpotLogo} alt="FamilySpot" className="h-10 w-auto" />
               <span className="font-baloo font-bold text-h3 text-secondary">
                 FamilySpot
               </span>
@@ -69,9 +69,16 @@ const Footer = () => {
                 {section.title}
               </h3>
               <ul className="space-y-2">
-                {section.links.map(link => <li key={link.label}>
-                    
-                  </li>)}
+                {section.links.map(link => (
+                  <li key={link.label}>
+                    <a 
+                      href={link.href}
+                      className="text-body text-background/80 hover:text-secondary transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>)}
         </div>
