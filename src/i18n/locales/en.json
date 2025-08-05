@@ -43,17 +43,31 @@
   "benefits": {
     "title": "Why choose FamilySpot?",
     "subtitle": "We created a solution designed especially for families, with features that make it easy to discover safe and suitable places for children.",
-    "community": {
-      "title": "Verified Community",
-      "description": "Reviews and tips from real parents in your area"
+    "items": {
+      "verified": {
+        "title": "Verified Community",
+        "description": "Reviews and tips from real parents in your area"
+      },
+      "filters": {
+        "title": "Age Filters",
+        "description": "Find places suitable for your children's age"
+      },
+      "updated": {
+        "title": "Always Updated",
+        "description": "Real-time information about schedules, prices and availability"
+      }
     },
-    "ageFilter": {
-      "title": "Age Filters",
-      "description": "Find places suitable for your children's age"
+    "categories": {
+      "cafes": "Cafés",
+      "restaurants": "Restaurants",
+      "activities": "Activities",
+      "playgrounds": "Playgrounds"
     },
-    "updated": {
-      "title": "Always Updated",
-      "description": "Real-time information about schedules, prices and availability"
+    "filters": {
+      "shade": "Shade",
+      "drinkingFountain": "Drinking Fountain",
+      "accessibility": "Accessibility",
+      "foodNearby": "Food Nearby"
     }
   },
   "emailCapture": {
