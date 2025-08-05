@@ -49,49 +49,35 @@ const EmailCapture = () => {
       // Detectar idioma atual do usuário
       const currentLanguage = localStorage.getItem('i18nextLng') || 'en';
       
-      // Verificar se email já existe
-      const { data: existingEmail, error: checkError } = await supabase
-        .rpc('check_email_exists', { email_input: email });
-      
-      if (checkError) {
-        console.error('Error checking email:', checkError);
-        throw new Error('Failed to validate email');
-      }
-      
-      if (existingEmail) {
-        toast({
-          variant: "destructive",
-          title: t('emailCapture.errors.emailExists'),
-          description: t('emailCapture.errors.emailExistsDesc')
-        });
-        return;
-      }
-      
-      // Inserir email no banco de dados
-      const { data, error } = await supabase
-        .from('email_subscribers')
-        .insert({
+      // Chamar a edge function do Brevo
+      const { data, error } = await supabase.functions.invoke('brevo-subscribe', {
+        body: {
           email: email.toLowerCase().trim(),
-          accepted_terms: acceptTerms,
-          language: currentLanguage
-        })
-        .select()
-        .single();
+          language: currentLanguage,
+          acceptedTerms: acceptTerms
+        }
+      });
       
       if (error) {
-        console.error('Error inserting email:', error);
-        if (error.code === '23505') { // Unique constraint violation
+        console.error('Subscription error:', error);
+        
+        if (error.message?.includes('already subscribed')) {
           toast({
             variant: "destructive",
             title: t('emailCapture.errors.emailExists'),
             description: t('emailCapture.errors.emailExistsDesc')
           });
-          return;
+        } else {
+          toast({
+            variant: "destructive",
+            title: t('emailCapture.errors.submitError'),
+            description: t('emailCapture.errors.submitErrorDesc')
+          });
         }
-        throw error;
+        return;
       }
       
-      console.log('Email subscriber created:', data);
+      console.log('Email subscriber created and added to Brevo:', data);
       setIsSuccess(true);
       toast({
         title: t('emailCapture.successToast'),
