@@ -124,13 +124,22 @@ const handler = async (req: Request): Promise<Response> => {
         });
 
         const responseText = await brevoResponse.text();
-        console.log(`Brevo response status: ${brevoResponse.status}, body: ${responseText}`);
+        console.log(`Brevo response status: ${brevoResponse.status}`);
+        console.log(`Brevo response headers:`, Object.fromEntries(brevoResponse.headers.entries()));
+        console.log(`Brevo response body: ${responseText}`);
 
         if (!brevoResponse.ok) {
-          console.error('Brevo API error:', responseText);
+          console.error('Brevo API error - Status:', brevoResponse.status, 'Body:', responseText);
           // Don't fail the request if Brevo fails, just log it
         } else {
-          console.log('Successfully added to Brevo list');
+          console.log('Successfully added to Brevo list - Response:', responseText);
+          // Parse response to see contact ID
+          try {
+            const brevoData = JSON.parse(responseText);
+            console.log('Brevo contact ID:', brevoData.id);
+          } catch (e) {
+            console.log('Could not parse Brevo response as JSON');
+          }
         }
       } catch (brevoError) {
         console.error('Error calling Brevo API:', brevoError);
