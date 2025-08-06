@@ -123,28 +123,28 @@
     "moreQuestions": "Have more questions? Contact us:",
     "items": {
       "whatIs": {
-        "question": "What is FamilySpot and how does it help families in Madrid, Barcelona, and Málaga?",
-        "answer": "FamilySpot is a collaborative platform where parents discover verified family-friendly places in Madrid, Barcelona, and Málaga. We create a trusted community of families sharing family restaurants, children's playgrounds, cafes with play areas, and kids' activities in these Spanish cities."
+        "question": "What is FamilySpot and how does it help families?",
+        "answer": "FamilySpot is a collaborative platform where parents discover verified family-friendly places in their community. We create a trusted network of families sharing family restaurants, children's playgrounds, cafes with play areas, and kids' activities."
       },
       "verification": {
-        "question": "How does family-friendly place verification work in Spain?",
-        "answer": "All family restaurants, children's playgrounds, and kids' places are evaluated by real parents from Madrid, Barcelona, and Málaga. We use a detailed review system that includes information about infrastructure, safety, accessibility, and suitability for different children's ages."
+        "question": "How does family-friendly place verification work?",
+        "answer": "All family restaurants, children's playgrounds, and kids' places are evaluated by real parents from our community. We use a detailed review system that includes information about infrastructure, safety, accessibility, and suitability for different ages."
       },
       "cost": {
-        "question": "Is it free to find family-friendly places in Madrid, Barcelona, and Málaga?",
-        "answer": "Yes! FamilySpot is 100% free for all Spanish families. Our mission is to help parents find the best places for children at no cost. Access family restaurants, verified playgrounds, and children's activities completely free."
+        "question": "Is it free to find family-friendly places?",
+        "answer": "Yes! FamilySpot is 100% free for all families. Our mission is to help parents find the best places for children at no cost. Access family restaurants, verified playgrounds, and children's activities completely free."
       },
       "launch": {
-        "question": "When will FamilySpot be available in Madrid, Barcelona, and Málaga?",
-        "answer": "We are finalizing the development of our family-friendly places platform for Spain. Sign up for our list to be one of the first to discover the best family restaurants and children's places when we're ready!"
+        "question": "When will FamilySpot be available?",
+        "answer": "We are finalizing the development of our family-friendly places platform. Sign up for our list to be one of the first to discover the best family restaurants and children's places when we're ready!"
       },
       "contribute": {
-        "question": "How can I recommend family-friendly places in my Spanish city?",
-        "answer": "After launch, you'll be able to add new family restaurants, review children's playgrounds you've visited in Madrid, Barcelona, or Málaga, add photos of cafes with play areas, and share useful tips about kids' places with other Spanish families."
+        "question": "How can I recommend family-friendly places?",
+        "answer": "After launch, you'll be able to add new family restaurants, review children's playgrounds you've visited, add photos of cafes with play areas, and share useful tips about kids' places with other families."
       },
       "cities": {
-        "question": "In which Spanish cities will FamilySpot be available?",
-        "answer": "We'll start with Madrid, Barcelona, and Málaga, the main Spanish cities for families, and expand gradually to other cities in Spain. If you want your city to be included in our family-friendly places network, sign up and let us know where you are!"
+        "question": "In which cities will FamilySpot be available?",
+        "answer": "We'll start with Madrid, Barcelona, and Málaga, and expand gradually to other cities. If you want your city to be included, sign up and let us know where you are!"
       }
     }
   },

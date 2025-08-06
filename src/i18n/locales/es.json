@@ -124,28 +124,28 @@
     "moreQuestions": "¿Tienes más preguntas? Contáctanos:",
     "items": {
       "whatIs": {
-        "question": "¿Qué es FamilySpot y cómo ayuda a las familias en Madrid, Barcelona y Málaga?",
-        "answer": "FamilySpot es una plataforma colaborativa donde padres descubren lugares family-friendly verificados en Madrid, Barcelona y Málaga. Creamos una comunidad confiable de familias que comparten restaurantes, parques infantiles, cafeterías con área de juegos y actividades para niños en estas ciudades españolas."
+        "question": "¿Qué es FamilySpot y cómo ayuda a las familias?",
+        "answer": "FamilySpot es una plataforma colaborativa donde padres descubren lugares family-friendly verificados por la comunidad. Creamos una red confiable de familias que comparten restaurantes, parques infantiles, cafeterías con área de juegos y actividades para niños."
       },
       "verification": {
-        "question": "¿Cómo funciona la verificación de lugares family-friendly en España?",
-        "answer": "Todos los restaurantes familiares, parques infantiles y lugares para niños son evaluados por padres reales de Madrid, Barcelona y Málaga. Utilizamos un sistema de reseñas detalladas que incluye información sobre infraestructura, seguridad, accesibilidad y adecuación para diferentes edades de niños."
+        "question": "¿Cómo funciona la verificación de lugares family-friendly?",
+        "answer": "Todos los restaurantes familiares, parques infantiles y lugares para niños son evaluados por padres reales de nuestra comunidad. Utilizamos un sistema de reseñas detalladas que incluye información sobre infraestructura, seguridad, accesibilidad y adecuación para diferentes edades."
       },
       "cost": {
-        "question": "¿Es gratuito encontrar lugares family-friendly en Madrid, Barcelona y Málaga?",
-        "answer": "¡Sí! FamilySpot es 100% gratuito para todas las familias españolas. Nuestra misión es ayudar a padres a encontrar los mejores lugares para niños sin costo alguno. Accede a restaurantes familiares, parques verificados y actividades infantiles totalmente gratis."
+        "question": "¿Es gratuito encontrar lugares family-friendly?",
+        "answer": "¡Sí! FamilySpot es 100% gratuito para todas las familias. Nuestra misión es ayudar a padres a encontrar los mejores lugares para niños sin costo alguno. Accede a restaurantes familiares, parques verificados y actividades infantiles totalmente gratis."
       },
       "launch": {
-        "question": "¿Cuándo estará disponible FamilySpot en Madrid, Barcelona y Málaga?",
-        "answer": "Estamos finalizando el desarrollo de nuestra plataforma de lugares family-friendly para España. ¡Regístrate en nuestra lista para ser uno de los primeros en descubrir los mejores restaurantes familiares y lugares para niños cuando estemos listos!"
+        "question": "¿Cuándo estará disponible FamilySpot?",
+        "answer": "Estamos finalizando el desarrollo de nuestra plataforma de lugares family-friendly. ¡Regístrate en nuestra lista para ser uno de los primeros en descubrir los mejores restaurantes familiares y lugares para niños cuando estemos listos!"
       },
       "contribute": {
-        "question": "¿Cómo puedo recomendar lugares family-friendly en mi ciudad española?",
-        "answer": "Después del lanzamiento, podrás agregar nuevos restaurantes familiares, evaluar parques infantiles que hayas visitado en Madrid, Barcelona o Málaga, añadir fotos de cafeterías con área de juegos y compartir consejos útiles sobre lugares para niños con otras familias españolas."
+        "question": "¿Cómo puedo recomendar lugares family-friendly?",
+        "answer": "Después del lanzamiento, podrás agregar nuevos restaurantes familiares, evaluar parques infantiles que hayas visitado, añadir fotos de cafeterías con área de juegos y compartir consejos útiles sobre lugares para niños con otras familias."
       },
       "cities": {
-        "question": "¿En qué ciudades españolas estará disponible FamilySpot?",
-        "answer": "Comenzaremos con Madrid, Barcelona y Málaga, las principales ciudades españolas para familias, y expandiremos gradualmente a otras ciudades de España. ¡Si quieres que tu ciudad sea incluida en nuestra red de lugares family-friendly, regístrate y dinos dónde estás!"
+        "question": "¿En qué ciudades estará disponible FamilySpot?",
+        "answer": "Comenzaremos con Madrid, Barcelona y Málaga, y expandiremos gradualmente a otras ciudades. ¡Si quieres que tu ciudad sea incluida, regístrate y dinos dónde estás!"
       }
     }
   },
