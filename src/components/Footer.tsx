@@ -73,7 +73,7 @@ const Footer = () => {
       ]
     }
   ];
-  return <footer className="bg-foreground text-background">
+  return <footer id="contato" className="bg-foreground text-background">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Main Footer Content */}
         <div className="py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
