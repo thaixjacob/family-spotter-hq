@@ -52,8 +52,8 @@
         "description": "Todos los lugares son recomendados y calificados por padres reales, garantizando información confiable y actualizada."
       },
       "filters": {
-        "title": "Filtros por Edad y Necesidades",
-        "description": "Encuentra lugares perfectos para cada grupo de edad de tu hijo, desde bebés hasta niños mayores."
+        "title": "Filtros Inteligentes",
+        "description": "Filtra por edad, precio, tipo de ambiente (interior/exterior), categorías, amenidades e instalaciones específicas."
       },
       "updated": {
         "title": "Información Actualizada",
@@ -70,7 +70,11 @@
       "shade": "Sombra",
       "drinkingFountain": "Fuente de Agua",
       "accessibility": "Accesibilidad",
-      "foodNearby": "Comida Cerca"
+      "foodNearby": "Comida Cerca",
+      "price": "Precio",
+      "indoor": "Ambiente Interior",
+      "outdoor": "Ambiente Exterior",
+      "amenities": "Amenidades"
     }
   },
   "about": {

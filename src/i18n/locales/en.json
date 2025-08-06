@@ -52,8 +52,8 @@
         "description": "Reviews and tips from real parents in your area"
       },
       "filters": {
-        "title": "Age Filters",
-        "description": "Find places suitable for your children's age"
+        "title": "Smart Filters",
+        "description": "Filter by age, price, environment type (indoor/outdoor), categories, amenities and specific facilities."
       },
       "updated": {
         "title": "Always Updated",
@@ -70,7 +70,11 @@
       "shade": "Shade",
       "drinkingFountain": "Drinking Fountain",
       "accessibility": "Accessibility",
-      "foodNearby": "Food Nearby"
+      "foodNearby": "Food Nearby",
+      "price": "Price",
+      "indoor": "Indoor Environment",
+      "outdoor": "Outdoor Environment",
+      "amenities": "Amenities"
     }
   },
   "emailCapture": {
