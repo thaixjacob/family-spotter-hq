@@ -66,18 +66,6 @@ const About = () => {
 
           <div className="relative">
             <div className="relative z-10">
-              {/* Quote */}
-              <div className="bg-card border border-border rounded-2xl p-6 shadow-sm">
-                <blockquote className="text-body text-muted-foreground italic text-center">
-                  "{t('about.quote')}"
-                </blockquote>
-                <div className="text-center mt-4">
-                  <span className="text-small text-foreground font-medium">
-                    {t('about.founder')}
-                  </span>
-                </div>
-              </div>
-              
               {/* Mission Image */}
               <div className="mt-6">
                 <img 
@@ -91,6 +79,20 @@ const About = () => {
             {/* Decorative Elements */}
             <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-primary/20 to-primary-dark/20 rounded-full blur-xl"></div>
             <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-gradient-to-br from-secondary/20 to-secondary-dark/20 rounded-full blur-xl"></div>
+          </div>
+        </div>
+
+        {/* Quote - Full Width Below Story */}
+        <div className="mt-16">
+          <div className="bg-card border border-border rounded-2xl p-6 shadow-sm">
+            <blockquote className="text-body text-muted-foreground italic text-center">
+              "{t('about.quote')}"
+            </blockquote>
+            <div className="text-center mt-4">
+              <span className="text-small text-foreground font-medium">
+                {t('about.founder')}
+              </span>
+            </div>
           </div>
         </div>
       </div>
