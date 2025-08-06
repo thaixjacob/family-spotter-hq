@@ -77,15 +77,15 @@
     "story": {
       "newMom": {
         "title": "Uma Mãe de Primeira Viagem",
-        "description": "Tudo começou com uma mãe de primeira viagem que, ao dar à luz seu primeiro filho, se deu conta de que mal conhecia sua própria cidade. Onde levar o bebê? Quais lugares eram seguros e adequados? Essas perguntas simples revelaram um grande problema."
+        "description": "Uma mãe descobriu que mal conhecia lugares adequados para seu bebê em sua própria cidade."
       },
       "discovery": {
         "title": "O Problema se Intensifica",
-        "description": "Quando chegava a hora de viajar, esse problema ficava ainda mais evidente. Em cidades desconhecidas, encontrar lugares apropriados para crianças se tornava uma verdadeira missão impossível, cheia de tentativas e erros."
+        "description": "Ao viajar, encontrar lugares apropriados para crianças se tornou uma missão impossível."
       },
       "solution": {
         "title": "Nasce o FamilySpot",
-        "description": "Foi dessa necessidade real que surgiu a ideia do FamilySpot: um mapa colaborativo onde pais compartilham descobertas, avaliam lugares e ajudam outras famílias a encontrarem espaços seguros e adequados para seus filhos."
+        "description": "Criamos um mapa colaborativo onde pais compartilham descobertas e ajudam outras famílias."
       }
     },
     "quote": "Minha missão com o FamilySpot é conectar famílias a lugares que acolhem e pensam nas crianças. Quero transformar a ansiedade e a incerteza de visitar um local novo com os filhos em uma experiência tranquila, segura e inesquecível.",
