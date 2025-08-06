@@ -50,7 +50,7 @@ const FAQ = () => {
             <h2 className="text-h2 font-bold text-foreground mb-4">
               {t('faq.title')}
             </h2>
-            <p className="text-body text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-body text-muted-foreground max-w-2xl mx-auto mb-8">
               {t('faq.subtitle')}
             </p>
           </div>
