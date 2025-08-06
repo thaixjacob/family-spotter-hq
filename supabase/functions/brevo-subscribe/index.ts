@@ -21,6 +21,12 @@ const handler = async (req: Request): Promise<Response> => {
   try {
     console.log('Function started - brevo-subscribe');
     
+    // Get client IP for rate limiting
+    const clientIP = req.headers.get('x-forwarded-for') || 
+                     req.headers.get('x-real-ip') || 
+                     'unknown';
+    console.log(`Request from IP: ${clientIP}`);
+    
     const { email, language, acceptedTerms }: SubscribeRequest = await req.json();
     console.log(`Processing subscription for email: ${email}, language: ${language}, acceptedTerms: ${acceptedTerms}`);
 
@@ -47,6 +53,79 @@ const handler = async (req: Request): Promise<Response> => {
     }
 
     const supabase = createClient(supabaseUrl, supabaseKey);
+
+    // Enhanced input validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      console.log('Validation failed - invalid email format');
+      return new Response(
+        JSON.stringify({ error: 'Invalid email format' }),
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
+    // Rate limiting check
+    const rateLimitKey = `newsletter_signup_${clientIP}`;
+    const windowMinutes = 5;
+    const maxRequests = 5;
+    
+    try {
+      // Check current rate limit status
+      const { data: rateLimit, error: rateLimitError } = await supabase
+        .from('rate_limits')
+        .select('request_count, window_start')
+        .eq('identifier', rateLimitKey)
+        .eq('endpoint', 'brevo-subscribe')
+        .maybeSingle();
+
+      if (rateLimitError && rateLimitError.code !== 'PGRST116') {
+        console.error('Error checking rate limit:', rateLimitError);
+        // Continue without rate limiting if there's a DB error
+      } else if (rateLimit) {
+        const windowStart = new Date(rateLimit.window_start);
+        const now = new Date();
+        const timeDiff = (now.getTime() - windowStart.getTime()) / (1000 * 60); // minutes
+
+        if (timeDiff < windowMinutes) {
+          if (rateLimit.request_count >= maxRequests) {
+            console.log(`Rate limit exceeded for IP: ${clientIP}`);
+            return new Response(
+              JSON.stringify({ error: 'Too many requests. Please try again later.' }),
+              { status: 429, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+            );
+          }
+          
+          // Increment counter
+          await supabase
+            .from('rate_limits')
+            .update({ request_count: rateLimit.request_count + 1 })
+            .eq('identifier', rateLimitKey)
+            .eq('endpoint', 'brevo-subscribe');
+        } else {
+          // Reset window
+          await supabase
+            .from('rate_limits')
+            .update({ 
+              request_count: 1, 
+              window_start: now.toISOString() 
+            })
+            .eq('identifier', rateLimitKey)
+            .eq('endpoint', 'brevo-subscribe');
+        }
+      } else {
+        // Create new rate limit entry
+        await supabase
+          .from('rate_limits')
+          .insert({
+            identifier: rateLimitKey,
+            endpoint: 'brevo-subscribe',
+            request_count: 1,
+            window_start: new Date().toISOString()
+          });
+      }
+    } catch (rateLimitErr) {
+      console.error('Rate limiting error (continuing anyway):', rateLimitErr);
+    }
 
     // Check if email already exists
     console.log(`Checking if email ${email} already exists`);
