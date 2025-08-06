@@ -4,7 +4,9 @@
     "howItWorks": "Cómo Funciona",
     "benefits": "Beneficios",
     "contact": "Contacto",
-    "language": "Idioma"
+    "language": "Idioma",
+    "faq": "Preguntas Frecuentes",
+    "logoAlt": "FamilySpot - Lugares family-friendly verificados por la comunidad"
   },
   "hero": {
     "title": "Descubre los mejores lugares para familias en tu ciudad",
@@ -167,6 +169,7 @@
     "cookies": "Cookies",
     "copyright": "© 2025 FAMILYSPOT - Descubre lugares familiares",
     "developmentStatus": "Plataforma en desarrollo",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "logoAlt": "FamilySpot - Comunidad de lugares family-friendly en España"
   }
 }

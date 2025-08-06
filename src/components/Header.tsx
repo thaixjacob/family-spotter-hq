@@ -18,7 +18,7 @@ const Header = () => {
     { label: t('header.about'), href: '#sobre' },
     { label: t('header.howItWorks'), href: '#como-funciona' },
     { label: t('header.benefits'), href: '#beneficios' },
-    { label: 'FAQ', href: '#preguntas-frecuentes' },
+    { label: t('header.faq'), href: '#preguntas-frecuentes' },
     { label: t('header.contact'), href: '#contato' }
   ];
 
@@ -30,7 +30,7 @@ const Header = () => {
           <div className="flex items-center space-x-2">
             <img 
               src={familySpotLogo} 
-              alt="FamilySpot - Lugares family-friendly verificados en Madrid, Barcelona y Málaga" 
+              alt={t('header.logoAlt')} 
               className="h-8 w-auto"
             />
             <span className="font-baloo font-bold text-h3 text-secondary">

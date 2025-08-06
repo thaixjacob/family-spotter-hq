@@ -4,7 +4,9 @@
     "howItWorks": "How It Works",
     "benefits": "Benefits",
     "contact": "Contact",
-    "language": "Language"
+    "language": "Language",
+    "faq": "FAQ",
+    "logoAlt": "FamilySpot - Community-verified family-friendly places"
   },
   "hero": {
     "title": "Discover the best family places in your city",
@@ -115,7 +117,8 @@
     "cookies": "Cookies",
     "copyright": "© 2025 FAMILYSPOT - Discover family places",
     "developmentStatus": "Platform under development",
-    "contact": "Contact"
+    "contact": "Contact",
+    "logoAlt": "FamilySpot - Community of family-friendly places"
   },
   "faq": {
     "title": "Frequently Asked Questions",

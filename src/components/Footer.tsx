@@ -80,7 +80,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
-              <img src={familySpotLogo} alt="FamilySpot - Comunidad de lugares family-friendly en España" className="h-10 w-auto" />
+              <img src={familySpotLogo} alt={t('footer.logoAlt')} className="h-10 w-auto" />
               <span className="font-baloo font-bold text-h3 text-secondary">
                 FamilySpot
               </span>
