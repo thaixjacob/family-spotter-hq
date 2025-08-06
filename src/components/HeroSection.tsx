@@ -18,7 +18,7 @@ const HeroSection = () => {
           <div className="space-y-8 text-center lg:text-left">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">
-                Encuentra los mejores <span className="text-primary">lugares family-friendly</span> de Espanha
+                {t('hero.title')}
               </h1>
               
               <p className="text-body text-muted-foreground max-w-lg mx-auto lg:mx-0 px-4 sm:px-0">
@@ -71,7 +71,7 @@ const HeroSection = () => {
             <div className="relative z-10">
               <img
                 src="/lovable-uploads/b46a0d7b-97fa-4d8e-bd0f-8dce6c56987a.png"
-                alt="Familia feliz descubriendo restaurantes family-friendly en Madrid, Barcelona y Málaga"
+                alt={t('hero.imageAlt')}
                 className="w-full h-auto rounded-2xl shadow-2xl"
               />
             </div>
