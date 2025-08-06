@@ -30,7 +30,7 @@ const Header = () => {
           <div className="flex items-center space-x-2">
             <img 
               src={familySpotLogo} 
-              alt="FamilySpot" 
+              alt="FamilySpot - Lugares family-friendly verificados en Madrid, Barcelona y Málaga" 
               className="h-8 w-auto"
             />
             <span className="font-baloo font-bold text-h3 text-secondary">
