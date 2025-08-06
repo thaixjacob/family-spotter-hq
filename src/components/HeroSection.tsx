@@ -18,7 +18,7 @@ const HeroSection = () => {
           <div className="space-y-8 text-center lg:text-left">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">
-                Encuentra los mejores <span className="text-primary">lugares family-friendly</span> de Madrid, Barcelona y Málaga
+                Encuentra los mejores <span className="text-primary">lugares family-friendly</span> de Espanha
               </h1>
               
               <p className="text-body text-muted-foreground max-w-lg mx-auto lg:mx-0 px-4 sm:px-0">
