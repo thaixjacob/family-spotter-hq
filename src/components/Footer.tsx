@@ -62,6 +62,15 @@ const Footer = () => {
           href: "#cookies"
         }
       ]
+    },
+    {
+      title: t('footer.contact'),
+      links: [
+        {
+          label: "hi@familyspot.app",
+          href: "mailto:hi@familyspot.app"
+        }
+      ]
     }
   ];
   return <footer className="bg-foreground text-background">
