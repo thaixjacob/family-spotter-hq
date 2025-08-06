@@ -124,28 +124,28 @@
     "moreQuestions": "Tem outras perguntas? Entre em contato conosco:",
     "items": {
       "whatIs": {
-        "question": "O que é o FamilySpot?",
-        "answer": "O FamilySpot é uma plataforma colaborativa onde pais compartilham e descobrem lugares adequados para crianças. Criamos uma comunidade confiável de famílias que ajudam outras famílias a encontrar os melhores locais para momentos especiais."
+        "question": "O que é o FamilySpot e como ajuda famílias em Madrid, Barcelona e Málaga?",
+        "answer": "O FamilySpot é uma plataforma colaborativa onde pais descobrem lugares family-friendly verificados em Madrid, Barcelona e Málaga. Criamos uma comunidade confiável de famílias que compartilham restaurantes familiares, parques infantis, cafeterias com área de jogos e atividades para crianças nessas cidades espanholas."
       },
       "verification": {
-        "question": "Como funciona a verificação dos lugares?",
-        "answer": "Todos os lugares são avaliados e comentados por pais reais da nossa comunidade. Utilizamos um sistema de avaliações detalhadas que inclui informações sobre infraestrutura, segurança, acessibilidade e adequação para diferentes idades."
+        "question": "Como funciona a verificação de lugares family-friendly na Espanha?",
+        "answer": "Todos os restaurantes familiares, parques infantis e lugares para crianças são avaliados por pais reais de Madrid, Barcelona e Málaga. Utilizamos um sistema de avaliações detalhadas que inclui informações sobre infraestrutura, segurança, acessibilidade e adequação para diferentes idades de crianças."
       },
       "cost": {
-        "question": "O FamilySpot é gratuito?",
-        "answer": "Sim! O FamilySpot é 100% gratuito para todas as famílias. Nossa missão é conectar e ajudar famílias, não cobrar por isso. Você pode usar todas as funcionalidades sem custo algum."
+        "question": "É gratuito encontrar lugares family-friendly em Madrid, Barcelona e Málaga?",
+        "answer": "Sim! O FamilySpot é 100% gratuito para todas as famílias espanholas. Nossa missão é ajudar pais a encontrar os melhores lugares para crianças sem custo algum. Acesse restaurantes familiares, parques verificados e atividades infantis totalmente grátis."
       },
       "launch": {
-        "question": "Quando o FamilySpot será lançado?",
-        "answer": "Estamos finalizando o desenvolvimento da plataforma. Cadastre-se em nossa lista para ser um dos primeiros a saber quando estivermos prontos para o lançamento oficial!"
+        "question": "Quando estará disponível o FamilySpot em Madrid, Barcelona e Málaga?",
+        "answer": "Estamos finalizando o desenvolvimento da nossa plataforma de lugares family-friendly para a Espanha. Cadastre-se em nossa lista para ser um dos primeiros a descobrir os melhores restaurantes familiares e lugares para crianças quando estivermos prontos!"
       },
       "contribute": {
-        "question": "Como posso contribuir com a comunidade?",
-        "answer": "Após o lançamento, você poderá adicionar novos lugares, avaliar locais que visitou, adicionar fotos e compartilhar dicas úteis para outras famílias. Quanto mais ativa a comunidade, melhor para todos!"
+        "question": "Como posso recomendar lugares family-friendly na minha cidade espanhola?",
+        "answer": "Após o lançamento, você poderá adicionar novos restaurantes familiares, avaliar parques infantis que visitou em Madrid, Barcelona ou Málaga, adicionar fotos de cafeterias com área de jogos e compartilhar dicas úteis sobre lugares para crianças com outras famílias espanholas."
       },
       "cities": {
-        "question": "Em quais cidades o FamilySpot estará disponível?",
-        "answer": "Começaremos com Madrid, Barcelona e Málaga, e expandiremos gradualmente para outras cidades. Se você quer que sua cidade seja incluída, cadastre-se e nos avise onde você está!"
+        "question": "Em quais cidades espanholas estará disponível o FamilySpot?",
+        "answer": "Começaremos com Madrid, Barcelona e Málaga, as principais cidades espanholas para famílias, e expandiremos gradualmente para outras cidades da Espanha. Se você quer que sua cidade seja incluída em nossa rede de lugares family-friendly, cadastre-se e nos avise onde você está!"
       }
     }
   },
