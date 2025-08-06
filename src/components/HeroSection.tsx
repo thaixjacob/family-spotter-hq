@@ -26,12 +26,12 @@ const HeroSection = () => {
               </p>
             </div>
 
-            <div className="flex flex-col lg:flex-row gap-3 sm:gap-4 justify-center lg:justify-start lg:items-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start lg:items-center">
               <Button 
                 variant="hero" 
                 size="lg"
                 onClick={scrollToEmailCapture}
-                className="group text-sm sm:text-base px-4 sm:px-6 lg:flex-[2]"
+                className="group text-sm sm:text-base px-4 sm:px-6 sm:flex-[2]"
               >
                 {t('hero.notifyLaunch')}
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
@@ -41,7 +41,7 @@ const HeroSection = () => {
                 variant="outline" 
                 size="lg"
                 onClick={() => document.getElementById('como-funciona')?.scrollIntoView({ behavior: 'smooth' })}
-                className="text-sm sm:text-base px-4 sm:px-6 lg:flex-1"
+                className="text-sm sm:text-base px-4 sm:px-6 sm:flex-1"
               >
                 {t('hero.learnMore')}
               </Button>
