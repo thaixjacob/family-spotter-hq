@@ -77,10 +77,10 @@ const FAQ = () => {
               {t('faq.moreQuestions')}
             </p>
             <a 
-              href="mailto:hello@familyspot.app" 
+              href="mailto:hi@familyspot.app" 
               className="text-primary hover:text-primary-dark font-medium transition-colors"
             >
-              hello@familyspot.app
+              hi@familyspot.app
             </a>
           </div>
         </div>
