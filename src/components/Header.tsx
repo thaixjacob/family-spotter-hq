@@ -18,6 +18,7 @@ const Header = () => {
     { label: t('header.about'), href: '#sobre' },
     { label: t('header.howItWorks'), href: '#como-funciona' },
     { label: t('header.benefits'), href: '#beneficios' },
+    { label: 'FAQ', href: '#preguntas-frecuentes' },
     { label: t('header.contact'), href: '#contato' }
   ];
 
@@ -43,7 +44,7 @@ const Header = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-body text-foreground hover:text-secondary transition-colors duration-200"
+                className="text-body text-foreground hover:text-primary transition-colors duration-200"
               >
                 {item.label}
               </a>

@@ -117,6 +117,37 @@
     "developmentStatus": "Platform under development",
     "contact": "Contact"
   },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about FamilySpot",
+    "moreQuestions": "Have more questions? Contact us:",
+    "items": {
+      "whatIs": {
+        "question": "What is FamilySpot?",
+        "answer": "FamilySpot is a collaborative platform where parents share and discover places suitable for children. We create a trusted community of families helping other families find the best places for special moments."
+      },
+      "verification": {
+        "question": "How does place verification work?",
+        "answer": "All places are evaluated and reviewed by real parents from our community. We use a detailed review system that includes information about infrastructure, safety, accessibility, and suitability for different ages."
+      },
+      "cost": {
+        "question": "Is FamilySpot free?",
+        "answer": "Yes! FamilySpot is 100% free for all families. Our mission is to connect and help families, not charge for it. You can use all features at no cost."
+      },
+      "launch": {
+        "question": "When will FamilySpot be launched?",
+        "answer": "We are finalizing the platform development. Sign up for our list to be one of the first to know when we're ready for the official launch!"
+      },
+      "contribute": {
+        "question": "How can I contribute to the community?",
+        "answer": "After launch, you'll be able to add new places, review locations you've visited, add photos, and share useful tips for other families. The more active the community, the better for everyone!"
+      },
+      "cities": {
+        "question": "In which cities will FamilySpot be available?",
+        "answer": "We'll start with major cities and expand gradually. If you want your city to be included, sign up and let us know where you are!"
+      }
+    }
+  },
   "about": {
     "title": "Our Story",
     "subtitle": "Discover the journey that gave birth to FamilySpot",

@@ -118,6 +118,37 @@
     "successToast": "¡Éxito! 🎉",
     "successToastDesc": "¡Has sido agregado a nuestra lista. Recibirás noticias pronto!"
   },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "subtitle": "Todo lo que necesitas saber sobre FamilySpot",
+    "moreQuestions": "¿Tienes más preguntas? Contáctanos:",
+    "items": {
+      "whatIs": {
+        "question": "¿Qué es FamilySpot?",
+        "answer": "FamilySpot es una plataforma colaborativa donde los padres comparten y descubren lugares adecuados para niños. Creamos una comunidad confiable de familias que ayudan a otras familias a encontrar los mejores lugares para momentos especiales."
+      },
+      "verification": {
+        "question": "¿Cómo funciona la verificación de lugares?",
+        "answer": "Todos los lugares son evaluados y comentados por padres reales de nuestra comunidad. Utilizamos un sistema de reseñas detalladas que incluye información sobre infraestructura, seguridad, accesibilidad y adecuación para diferentes edades."
+      },
+      "cost": {
+        "question": "¿FamilySpot es gratuito?",
+        "answer": "¡Sí! FamilySpot es 100% gratuito para todas las familias. Nuestra misión es conectar y ayudar a las familias, no cobrar por ello. Puedes usar todas las funcionalidades sin costo alguno."
+      },
+      "launch": {
+        "question": "¿Cuándo se lanzará FamilySpot?",
+        "answer": "Estamos finalizando el desarrollo de la plataforma. ¡Regístrate en nuestra lista para ser uno de los primeros en saber cuándo estemos listos para el lanzamiento oficial!"
+      },
+      "contribute": {
+        "question": "¿Cómo puedo contribuir con la comunidad?",
+        "answer": "Después del lanzamiento, podrás agregar nuevos lugares, evaluar sitios que hayas visitado, añadir fotos y compartir consejos útiles para otras familias. ¡Cuanto más activa sea la comunidad, mejor para todos!"
+      },
+      "cities": {
+        "question": "¿En qué ciudades estará disponible FamilySpot?",
+        "answer": "Comenzaremos con las principales ciudades españolas como Madrid, Barcelona y Málaga, y expandiremos gradualmente. ¡Si quieres que tu ciudad sea incluida, regístrate y dinos dónde estás!"
+      }
+    }
+  },
   "footer": {
     "description": "Conectando familias a través del descubrimiento de lugares increíbles para crear recuerdos inolvidables.",
     "madeWithLove": "Hecho con ❤️ para familias",

@@ -118,6 +118,37 @@
     "successToast": "Sucesso! 🎉",
     "successToastDesc": "Você foi adicionado à nossa lista. Em breve você receberá novidades!"
   },
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "subtitle": "Tudo o que você precisa saber sobre o FamilySpot",
+    "moreQuestions": "Tem outras perguntas? Entre em contato conosco:",
+    "items": {
+      "whatIs": {
+        "question": "O que é o FamilySpot?",
+        "answer": "O FamilySpot é uma plataforma colaborativa onde pais compartilham e descobrem lugares adequados para crianças. Criamos uma comunidade confiável de famílias que ajudam outras famílias a encontrar os melhores locais para momentos especiais."
+      },
+      "verification": {
+        "question": "Como funciona a verificação dos lugares?",
+        "answer": "Todos os lugares são avaliados e comentados por pais reais da nossa comunidade. Utilizamos um sistema de avaliações detalhadas que inclui informações sobre infraestrutura, segurança, acessibilidade e adequação para diferentes idades."
+      },
+      "cost": {
+        "question": "O FamilySpot é gratuito?",
+        "answer": "Sim! O FamilySpot é 100% gratuito para todas as famílias. Nossa missão é conectar e ajudar famílias, não cobrar por isso. Você pode usar todas as funcionalidades sem custo algum."
+      },
+      "launch": {
+        "question": "Quando o FamilySpot será lançado?",
+        "answer": "Estamos finalizando o desenvolvimento da plataforma. Cadastre-se em nossa lista para ser um dos primeiros a saber quando estivermos prontos para o lançamento oficial!"
+      },
+      "contribute": {
+        "question": "Como posso contribuir com a comunidade?",
+        "answer": "Após o lançamento, você poderá adicionar novos lugares, avaliar locais que visitou, adicionar fotos e compartilhar dicas úteis para outras famílias. Quanto mais ativa a comunidade, melhor para todos!"
+      },
+      "cities": {
+        "question": "Em quais cidades o FamilySpot estará disponível?",
+        "answer": "Começaremos com as principais cidades brasileiras e expandiremos gradualmente. Se você quer que sua cidade seja incluída, cadastre-se e nos avise onde você está!"
+      }
+    }
+  },
   "footer": {
     "description": "Conectando famílias através da descoberta de lugares incríveis para criar memórias inesquecíveis.",
     "madeWithLove": "Feito com ❤️ para famílias",

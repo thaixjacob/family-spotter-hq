@@ -17,8 +17,8 @@ const HeroSection = () => {
           {/* Content Side */}
           <div className="space-y-8 text-center lg:text-left">
             <div className="space-y-4">
-              <h1 className="text-h1 font-bold text-foreground leading-tight">
-                {t('hero.title')}
+              <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">
+                Descubra os melhores <span className="text-primary">lugares para família</span> na sua cidade
               </h1>
               
               <p className="text-body text-muted-foreground max-w-lg mx-auto lg:mx-0 px-4 sm:px-0">
@@ -71,7 +71,7 @@ const HeroSection = () => {
             <div className="relative z-10">
               <img
                 src="/lovable-uploads/b46a0d7b-97fa-4d8e-bd0f-8dce6c56987a.png"
-                alt={t('hero.imageAlt')}
+                alt="Família feliz descobrindo restaurantes family-friendly e lugares verificados para crianças"
                 className="w-full h-auto rounded-2xl shadow-2xl"
               />
             </div>

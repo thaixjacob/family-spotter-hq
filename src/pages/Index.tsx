@@ -5,6 +5,7 @@ import HowItWorks from "@/components/HowItWorks";
 import Benefits from "@/components/Benefits";
 import FloatingCircles from "@/components/FloatingCircles";
 import EmailCapture from "@/components/EmailCapture";
+import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -23,6 +24,7 @@ const Index = () => {
           <FloatingCircles variant="accent" />
           <EmailCapture />
         </div>
+        <FAQ />
       </main>
       <Footer />
     </div>
