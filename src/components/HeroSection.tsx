@@ -12,7 +12,7 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-muted/30 to-secondary/5">
-      <div className="container mx-auto px-2 sm:px-4 lg:px-8 py-24">
+      <div className="container mx-auto px-2 sm:px-4 lg:px-8 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content Side */}
           <div className="space-y-8 text-center lg:text-left">
