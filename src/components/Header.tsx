@@ -27,7 +27,11 @@ const Header = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <a
+            href="https://familyspot.app/"
+            className="flex items-center space-x-2"
+            aria-label={t('header.logoAlt')}
+          >
             <img 
               src={familySpotLogo} 
               alt={t('header.logoAlt')} 
@@ -36,7 +40,7 @@ const Header = () => {
             <span className="font-baloo font-bold text-h3 text-secondary">
               FamilySpot
             </span>
-          </div>
+          </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
