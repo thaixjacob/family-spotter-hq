@@ -90,6 +90,10 @@ export type Database = {
         Args: { user_id: string }
         Returns: boolean
       }
+      log_security_event: {
+        Args: { details?: Json; event_type: string; user_id?: string }
+        Returns: undefined
+      }
     }
     Enums: {
       [_ in never]: never
